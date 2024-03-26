@@ -1,12 +1,13 @@
-#include <iostream>
-
-using namespace std;
+#ifndef GEOMETRICPP_HPP
+#define GEOMETRICPP_HPP
 
 class geoMetricpp {
-    public:
-            geoMetricpp();
-            ~geoMetricpp();
-
-            
     private:
+        /* data */
+    public:
+        geoMetricpp(/* args */);
+        ~geoMetricpp();
 };
+
+
+#endif
