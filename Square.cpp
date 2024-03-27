@@ -2,12 +2,7 @@
 
 #include <iostream>
 
-Square::Square(){
-    side_a = 0,
-    side_b = 0,
-    side_c = 0,
-    side_d = 0;
-}
+Square::Square(){}
 
 void Square::init(float a, float b, float c, float d) {
     side_a = a;
@@ -25,11 +20,7 @@ void Square::init(float a, float b, float c, float d) {
     }   
 }
 double Square::Area() {
-    if (side_a == 0)
-        std::cout << "square has no value initialized yet : ";
-    else
-        return side_a * side_b;
-    return 0;
+    return side_a * side_a;
 }
 
 Square::~Square(){}
