@@ -3,10 +3,14 @@
 
 class Square {
     private:
-        /* data */
+        float area_p, side_a, side_b,
+              side_c, side_d;
     public:
-        Square(/* args */);
+        Square();
         ~Square();
+
+        void init(float a, float b, float c, float d);
+        double Area();
 };
 
 
