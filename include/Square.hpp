@@ -2,16 +2,21 @@
 #ifndef SQUARE_HPP
 #define SQUARE_HPP
 
+#include <iostream>
+
 class Square {
     private:
-        float area_p, side_a, side_b,
-              side_c, side_d;
+        float side_lenght;
     public:
-        Square();
-        ~Square();
+        Square(double side_lenght) : side_lenght(side_lenght) { std::cout << "Square created" << std::endl;};
 
-        void init(float a, float b, float c, float d);
-        double Area();
+        double area() const {
+            return side_lenght * side_lenght;
+        }
+
+        double perimeter() const {
+            return side_lenght * 4;
+        }
 };
 
 
