@@ -1,3 +1,4 @@
+// geoMetricpp.cpp - Writed by whoxer
 #ifndef GEOMETRICPP_HPP
 #define GEOMETRICPP_HPP
 
@@ -5,8 +6,8 @@
 
 class geoMetricpp {
     public:
-        geoMetricpp(/* args */);
-        ~geoMetricpp();
+        // geoMetricpp(/* args */);
+        // ~geoMetricpp();
 
         Square square;
 };

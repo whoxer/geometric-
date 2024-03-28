@@ -1,3 +1,5 @@
+// Square.cpp - Writed by whoxer
+
 #include "Square.hpp"
 
 #include <iostream>
