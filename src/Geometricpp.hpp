@@ -14,10 +14,19 @@ namespace Geometricpp {
                 std::cout << "Square of size lenght " << side_lenght << " created" << std::endl;
             }
 
-            double area() const {return side_lenght * side_lenght;}
+            double area() const {return std::sqrt(side_lenght);}
             double perimeter() const {return side_lenght * 4;}
             double diagonal() const {return std::sqrt(2) * side_lenght;}
     };
+
+    class Triangle {
+        private:
+            /* data */
+        public:
+            Triangle(/* args */);
+            ~Triangle();
+        };
+    
 }
 
 
