@@ -3,6 +3,8 @@
 #define GEOMETRICPP_HPP
 
 #include <iostream>
+#include <cmath>
+
 namespace Geometricpp {
     class Square {
         private:
@@ -12,13 +14,9 @@ namespace Geometricpp {
                 std::cout << "Square of size lenght " << side_lenght << " created" << std::endl;
             }
 
-            double area() const {
-                return side_lenght * side_lenght;
-            }
-
-            double perimeter() const {
-                return side_lenght * 4;
-            }
+            double area() const {return side_lenght * side_lenght;}
+            double perimeter() const {return side_lenght * 4;}
+            double diagonal() const {return std::sqrt(2) * side_lenght;}
     };
 }
 
