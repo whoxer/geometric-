@@ -1,4 +1,4 @@
-// geoMetricpp.hpp - Writed by whoxer
+// geoMetricpp.hpp - Writed by @whoxer
 #ifndef GEOMETRICPP_HPP
 #define GEOMETRICPP_HPP
 
@@ -10,9 +10,9 @@ namespace Geometricpp {
         private:
             double side_lenght;
         public:
-            Square(double side_lenght) : side_lenght(side_lenght) {
-                std::cout << "Square of size lenght " << side_lenght << " created" << std::endl;
-            }
+            Square(double side_lenght) : side_lenght(side_lenght) {};
+
+            float size(){return side_lenght;}
 
             double area() const {return std::sqrt(side_lenght);}
             double perimeter() const {return side_lenght * 4;}
@@ -21,11 +21,13 @@ namespace Geometricpp {
 
     class Triangle {
         private:
-            /* data */
+            double a, b, c;
         public:
-            Triangle(/* args */);
-            ~Triangle();
-        };
+            Triangle(double a, double b, double c) : a(a), b(b), c(c) {
+                std::cout << "Triangle of size lenght <";
+                std::cout << a << ":" << b << ":" << c << std::endl;
+            }
+    };
     
 }
 
