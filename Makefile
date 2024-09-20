@@ -33,6 +33,9 @@ tests: $(TEST_OBJECTS)
 	@mkdir -p $(BUILDDIR)
 	$(CXX) $(CXXFLAGS) $^ -o $(BUILDDIR)/test_program
 
+run_build:
+	@ ./$(BUILDDIR)/test_program
+
 $(BUILDDIR)/%.o: $(TESTDIR)/%.cpp
 	@mkdir -p $(BUILDDIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
