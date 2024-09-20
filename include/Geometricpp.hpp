@@ -27,6 +27,7 @@ namespace Geometricpp {
             GEOMETRIC_SIDE a, b, c;
         public:
             Triangle(GEOMETRIC_SIDE a, GEOMETRIC_SIDE b, GEOMETRIC_SIDE c) : a(a), b(b), c(c) {}
+            
     };
     
 }
