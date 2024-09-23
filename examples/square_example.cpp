@@ -1,13 +1,14 @@
-#include "../include/Geometricpp.hpp"
+#include "Geometricpp.hpp"
+#include "Quadrilaterals.hpp"
 
+int main(void)
+{
 
-int main(void) {
-
-    Geometricpp::Square quadrado(10);
+    Geometricpp::Quadrilaterals::Square quadrado(10);
 
     std::cout << "Informações sobre o quadrado criado." << std::endl;
     std::cout << std::endl;
-    
+
     std::cout << "Comprimento dos lados: " << quadrado.size() << std::endl;
     std::cout << "Área: " << quadrado.area() << std::endl;
     std::cout << "Perímetro: " << quadrado.perimeter() << std::endl;
