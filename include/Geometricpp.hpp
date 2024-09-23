@@ -6,9 +6,11 @@
 #include <cmath>
 #include <stdexcept>
 
-typedef double GEOMETRIC_SIDE;
 
 namespace Geometricpp {
+
+    typedef double GEOMETRIC_SIDE;
+
     namespace Quadrilaterals {
         class Square;
         class Rectangle;
