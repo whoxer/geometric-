@@ -1,12 +1,10 @@
-#ifndef SQUARE_HPP
-#define SQUARE_HPP
+#ifndef QUADRILATERALS_HPP
+#define QUADRILATERALS_HPP
 
 #include "Geometricpp.hpp"
 
 
-using namespace Geometricpp;
-
-class Quadrilaterals::Square {
+class Geometricpp::Quadrilaterals::Square {
     private:
         Geometricpp::GEOMETRIC_SIDE side_length;
 
@@ -21,7 +19,7 @@ class Quadrilaterals::Square {
 };
 
 
-class Quadrilaterals::Rectangle {
+class Geometricpp::Quadrilaterals::Rectangle {
     private:
         Geometricpp::GEOMETRIC_SIDE x, y;
     public:
@@ -32,6 +30,12 @@ class Quadrilaterals::Rectangle {
             }
         }
 
+        std::pair<Geometricpp::GEOMETRIC_SIDE, Geometricpp::GEOMETRIC_SIDE> size() const;
+
+
+        double_t area() const;
+        double_t perimeter() const;
+        double_t diagonal() const;
 };
 
 #endif
