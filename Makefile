@@ -29,16 +29,12 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Compilar os testes
-tests: $(TEST_OBJECTS)
+tests: $(TEST_OBJECTS) $(OBJECTS)  # Adicione $(OBJECTS) para garantir que o programa principal seja linkado
 	@mkdir -p $(BUILDDIR)
 	$(CXX) $(CXXFLAGS) $^ -o $(BUILDDIR)/test_program
 
 run_build:
 	@ ./$(BUILDDIR)/test_program
-
-$(BUILDDIR)/%.o: $(TESTDIR)/%.cpp
-	@mkdir -p $(BUILDDIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Limpeza dos arquivos compilados
 clean:
