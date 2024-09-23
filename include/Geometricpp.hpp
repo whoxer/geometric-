@@ -9,7 +9,7 @@
 
 namespace Geometricpp {
 
-    typedef double GEOMETRIC_SIDE;
+    typedef double_t GEOMETRIC_SIDE;
 
     namespace Quadrilaterals {
         class Square;
