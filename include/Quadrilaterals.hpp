@@ -21,11 +21,11 @@ class Geometricpp::Quadrilaterals::Square {
 
 class Geometricpp::Quadrilaterals::Rectangle {
     private:
-        Geometricpp::GEOMETRIC_SIDE x, y;
+        Geometricpp::GEOMETRIC_SIDE h, w;
     public:
-        explicit Rectangle(Geometricpp::GEOMETRIC_SIDE x, Geometricpp::GEOMETRIC_SIDE y) : x(x), y(y) {
+        explicit Rectangle(Geometricpp::GEOMETRIC_SIDE x, Geometricpp::GEOMETRIC_SIDE y) : h(h), w(w) {
             // Confere se lados são iguais e evita que o objeto seja criado caso tentem.
-            if (x == y) {
+            if (h == w) {
                 throw std::invalid_argument("Sides can't be equal, at least one needs to be different.");
             }
         }
