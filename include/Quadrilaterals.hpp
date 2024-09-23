@@ -3,31 +3,35 @@
 
 #include "Geometricpp.hpp"
 
-class Square {
+
+using namespace Geometricpp;
+
+class Quadrilaterals::Square {
     private:
-        GEOMETRIC_SIDE side_length;
+        Geometricpp::GEOMETRIC_SIDE side_length;
 
     public:
-        explicit Square(GEOMETRIC_SIDE side_length) : side_length(side_length) {};
+        explicit Square(Geometricpp::GEOMETRIC_SIDE side_length) : side_length(side_length) {};
 
-        float size() { return side_length; }
+        double_t size() const;
 
-        double area() const { return side_length * side_length; }
-        double perimeter() const { return side_length * 4; }
-        double diagonal() const { return std::sqrt(2) * side_length; }
+        double_t area() const;
+        double_t perimeter() const;
+        double_t diagonal() const;
 };
 
 
-class Rectangle {
+class Quadrilaterals::Rectangle {
     private:
-        GEOMETRIC_SIDE side_a, side_b;
+        Geometricpp::GEOMETRIC_SIDE x, y;
     public:
-        explicit Rectangle(GEOMETRIC_SIDE side_a, GEOMETRIC_SIDE side_b) : side_a(side_a), side_b(side_b) {
+        explicit Rectangle(Geometricpp::GEOMETRIC_SIDE x, Geometricpp::GEOMETRIC_SIDE y) : x(x), y(y) {
             // Confere se lados são iguais e evita que o objeto seja criado caso tentem.
-            if (side_a == side_b) {
+            if (x == y) {
                 throw std::invalid_argument("Sides can't be equal, at least one needs to be different.");
             }
         }
+
 };
 
 #endif
