@@ -1,14 +1,14 @@
 # Definições de compilador e flags
 CXX = g++
-CXXFLAGS = -Iinclude -Wall -std=c++17 -fPIC
+CXXFLAGS = -I include -Wall -std=c++17 -fPIC
 
 # Diretórios
 SRCDIR = src
 INCDIR = include
 BUILDDIR = build
 TESTDIR = tests
-TARGET_STATIC = $(BUILDDIR)/libgeometriccpp.a
-TARGET_SHARED = $(BUILDDIR)/libgeometriccpp.so
+TARGET_STATIC = $(BUILDDIR)/libgeometricpp.a
+TARGET_SHARED = $(BUILDDIR)/libgeometricpp.so
 DOCDIR = doc
 
 # Fontes e objetos
@@ -39,7 +39,7 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.cpp
 # Compilar testes
 tests: $(TEST_OBJECTS) $(TARGET_SHARED)
 	@mkdir -p $(BUILDDIR)
-	$(CXX) $(CXXFLAGS) $^ -o $(BUILDDIR)/test_program -L$(BUILDDIR) -lgeometriccpp
+	$(CXX) $(CXXFLAGS) $^ -o $(BUILDDIR)/test_program -L$(BUILDDIR) -lgeometricpp
 
 $(BUILDDIR)/%.o: $(TESTDIR)/%.cpp
 	@mkdir -p $(BUILDDIR)
@@ -47,7 +47,7 @@ $(BUILDDIR)/%.o: $(TESTDIR)/%.cpp
 
 # Rodar os testes
 test: tests
-	@./$(BUILDDIR)/test_program
+	@ LD_LIBRARY_PATH=$(BUILDDIR) ./$(BUILDDIR)/test_program
 
 # Limpeza dos arquivos compilados
 clean:
@@ -55,16 +55,22 @@ clean:
 
 # Instalar a biblioteca e os headers no sistema
 install: $(TARGET_STATIC) $(TARGET_SHARED)
-	@echo "Instalando a biblioteca e headers..."
-	@mkdir -p /usr/local/lib /usr/local/include/geometriccpp
-	@cp $(TARGET_STATIC) /usr/local/lib/
-	@cp $(TARGET_SHARED) /usr/local/lib/
-	@cp $(INCDIR)/*.hpp /usr/local/include/geometriccpp/
+	@ echo "Instalando a biblioteca e headers..."
+	@ mkdir -p /usr/local/lib /usr/local/include/geometricpp
+	@ cp $(TARGET_STATIC) /usr/local/lib/
+	@ cp $(TARGET_SHARED) /usr/lib/
+	@ cp $(INCDIR)/*.hpp /usr/local/include/geometricpp/
+
+uninstall:
+	@echo "Removendo a biblioteca e headers..."
+	@rm -f /usr/local/lib/libgeometricpp.a
+	@rm -f /usr/local/lib/libgeometricpp.so
+	@rm -rf /usr/local/include/geometricpp
 
 # Doxygen para gerar a documentação
 docs:
-	@echo "Gerando documentação com Doxygen"
-	@doxygen Doxyfile
+	@ echo "Gerando documentação com Doxygen"
+	@ doxygen Doxyfile
 
 # Limpar a documentação
 clean-docs:
