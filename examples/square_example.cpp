@@ -1,8 +1,6 @@
 #include "Geometricpp.hpp"
-#include "Quadrilaterals.hpp"
 
-int main(void)
-{
+int main(void) {
 
     Geometricpp::Quadrilaterals::Square quadrado(10);
 
