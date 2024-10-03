@@ -1,4 +1,4 @@
-#include "../include/Quadrilaterals.hpp"
+#include "Geometricpp.hpp"
 
 
 // Definição dos métodos do Quadrado.
@@ -21,17 +21,17 @@ double_t Geometricpp::Quadrilaterals::Square::diagonal() const {
 
 std::pair<Geometricpp::GEOMETRIC_SIDE, Geometricpp::GEOMETRIC_SIDE> 
 Geometricpp::Quadrilaterals::Rectangle::size() const {
-    return std::make_pair(h, w);
+    return std::make_pair(height, width);
 }
 
 double_t Geometricpp::Quadrilaterals::Rectangle::area() const {
-    return h * w;
+    return height * width;
 }
 
 double_t Geometricpp::Quadrilaterals::Rectangle::perimeter() const {
-    return 2 * (h + w);
+    return 2 * (height + width);
 }
 
 double_t Geometricpp::Quadrilaterals::Rectangle::diagonal() const {
-    return sqrt(pow(h, 2) + pow(w, 2));
+    return sqrt(pow(height, 2) + pow(width, 2));
 }
