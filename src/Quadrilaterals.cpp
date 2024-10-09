@@ -35,3 +35,13 @@ double_t Geometricpp::Quadrilaterals::Rectangle::perimeter() const {
 double_t Geometricpp::Quadrilaterals::Rectangle::diagonal() const {
     return sqrt(pow(height, 2) + pow(width, 2));
 }
+
+
+// Definição dos métodos do Losango.
+double_t Geometricpp::Quadrilaterals::Rhombus::area() const {
+    return (diagonal_a * diagonal_b) / 2;
+}
+
+double_t Geometricpp::Quadrilaterals::Rhombus::perimeter() const {
+    return 4 * Geometricpp::pitagoras_diagonais(diagonal_a, diagonal_b);
+}
