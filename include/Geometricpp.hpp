@@ -22,17 +22,48 @@
 #include <cmath>
 #include <stdexcept>
 
+#include <type_traits>
 #include <utility>
 
-    namespace Geometricpp {
-    /*
-        ``GEOMETRIC_SIDE`` para uso específico em variáveis que armazenam valores de
-        comprimento de lados de uma classe de objeto geométrico plano.
-    */
+namespace Geometricpp 
+{
+
+    // Tipos definidos.
     typedef double_t GEOMETRIC_SIDE;
+    typedef double_t DIAGONAL;
+
 
     // ``PI`` Armazena constante valor de PI
     const double_t PI = 3.141592654;
+
+    /* Teorema de Pitágoras aplicada a Diagonais
+     *
+     *  Calcula e retorna o comprimento dos lados usando as diagonais
+     *  de quatro triângulos retângulos.
+     * 
+     *  exemplo:
+     *       
+     *      L² = (D / 2)² + (d / 2)²
+     *      ...
+     */
+    template <typename length> 
+    typename std::enable_if<std::is_arithmetic<length>::value, length>::type 
+    pitagoras_diagonais(length diagonal_maior, length diagonal_menor) 
+    {
+        return sqrt((diagonal_maior / 2) * (diagonal_maior / 2) + 
+                    (diagonal_menor / 2) * (diagonal_menor / 2));
+    }
+
+    /* Teorema de Pitágoras
+    *  
+    *  a² = b² + c²
+    */
+    // TODO
+    /*
+    * template <typename hipotenusa, >
+    * typename std::enable_if<std::is_arithmetic<hipotenusa>::value, hipotenusa>::type
+    * pitagoras()
+    * /
 
     /*
      * O namespace ``Quadrilaterals`` é responsável por agrupar as funções que
@@ -58,7 +89,8 @@
      * biblioteca pode acessar todas as funções relacionadas a quadriláteros usando o
      * prefixo "Quadrilaterals::", o que melhora a legibilidade e claridade do código.
      */
-    namespace Quadrilaterals {
+    namespace Quadrilaterals 
+    {
         /**
          * @class Square
          * @brief Representa um quadrado definido por um lado.
@@ -74,7 +106,8 @@
          *
          * @param side_length Comprimento do lado do quadrado.
          */
-        class Square {
+        class Square 
+        {
             private:
                 GEOMETRIC_SIDE side_length;
             public:
@@ -104,13 +137,16 @@
          * @throws std::invalid_argument Se os lados fornecidos forem iguais.
          */
 
-        class Rectangle {
+        class Rectangle 
+        {
             private:
                 GEOMETRIC_SIDE height, width;
 
             public:
-                explicit Rectangle(GEOMETRIC_SIDE h, GEOMETRIC_SIDE w) : height(h), width(w) {
-                    if (height == width) {
+                explicit Rectangle(GEOMETRIC_SIDE h, GEOMETRIC_SIDE w) : height(h), width(w) 
+                {
+                    if (height == width) 
+                    {
                         throw std::invalid_argument("Sides can't be equal, at least one needs to be different.");
                     }
                 }
@@ -120,7 +156,16 @@
                 double_t area() const;
                 double_t perimeter() const;
                 double_t diagonal() const;
-            };
+        };
+
+        class Rhombus 
+        {
+            private:
+                DIAGONAL diagonal_a, diagonal_b;
+            public:
+                double_t area() const;
+                double_t perimeter() const;
+        };
     };
     
     // TODO
