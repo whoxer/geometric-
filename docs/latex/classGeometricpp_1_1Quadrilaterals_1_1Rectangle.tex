@@ -1,0 +1,62 @@
+\hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rectangle}{}\doxysection{Referência à classe Geometricpp\+::Quadrilaterals\+::Rectangle}
+\label{classGeometricpp_1_1Quadrilaterals_1_1Rectangle}\index{Geometricpp::Quadrilaterals::Rectangle@{Geometricpp::Quadrilaterals::Rectangle}}
+
+
+Representa um retângulo definido por dois lados (altura e largura).  
+
+
+
+
+{\ttfamily \#include $<$Geometricpp.\+hpp$>$}
+
+\doxysubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a921f98b8b0714be04f616947a66bae59}\label{classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a921f98b8b0714be04f616947a66bae59}} 
+{\bfseries Rectangle} (GEOMETRIC\+\_\+\+SIDE h, GEOMETRIC\+\_\+\+SIDE w)
+\item 
+\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa3f3fefff5816f9af60bf8af12562d00}\label{classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa3f3fefff5816f9af60bf8af12562d00}} 
+std\+::pair$<$ Geometricpp\+::\+GEOMETRIC\+\_\+\+SIDE, Geometricpp\+::\+GEOMETRIC\+\_\+\+SIDE $>$ {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aff965981b053fd7cbd603a8fc3089833}\label{classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aff965981b053fd7cbd603a8fc3089833}} 
+double\+\_\+t {\bfseries area} () const
+\item 
+\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a704c522e029cce65bc668e3db9dd5800}\label{classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a704c522e029cce65bc668e3db9dd5800}} 
+double\+\_\+t {\bfseries perimeter} () const
+\item 
+\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa591e63c23f491a835ddc89755ba0eaa}\label{classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa591e63c23f491a835ddc89755ba0eaa}} 
+double\+\_\+t {\bfseries diagonal} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representa um retângulo definido por dois lados (altura e largura). 
+
+Esta classe encapsula a lógica para garantir que um retângulo não possa ser criado com lados iguais, prevenindo a formação de um quadrado.
+
+A classe possui os seguintes métodos\+:
+\begin{DoxyItemize}
+\item size()\+: Retorna um par contendo a altura e a largura do retângulo.
+\item area()\+: Calcula e retorna a área do retângulo.
+\item perimeter()\+: Calcula e retorna o perímetro do retângulo.
+\item diagonal()\+: Calcula e retorna o comprimento da diagonal do retângulo.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em height} & Altura do retângulo. \\
+\hline
+{\em width} & Largura do retângulo. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepções}
+{\em std\+::invalid\+\_\+argument} & Se os lados fornecidos forem iguais. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/Geometricpp.\+hpp\item 
+src/Quadrilaterals.\+cpp\end{DoxyCompactItemize}
