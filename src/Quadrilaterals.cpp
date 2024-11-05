@@ -17,8 +17,10 @@ double_t Geometricpp::Quadrilaterals::Square::diagonal() const {
     return std::sqrt(2) * side_length;
 }
 
-// Definição dos métodos do Retângulo
 
+
+
+// Definição dos métodos do Retângulo
 std::pair<Geometricpp::GEOMETRIC_SIDE, Geometricpp::GEOMETRIC_SIDE> 
 Geometricpp::Quadrilaterals::Rectangle::size() const {
     return std::make_pair(height, width);
@@ -37,6 +39,9 @@ double_t Geometricpp::Quadrilaterals::Rectangle::diagonal() const {
 }
 
 
+
+
+
 // Definição dos métodos do Losango.
 double_t Geometricpp::Quadrilaterals::Rhombus::area() const {
     return (diagonal_a * diagonal_b) / 2;
@@ -47,5 +52,23 @@ double_t Geometricpp::Quadrilaterals::Rhombus::perimeter() const {
 }
 
 double_t Geometricpp::Quadrilaterals::Rhombus::height const {
-    return (diagonal_a * diagonal_b) / 2;
+    
+    double_t area = (diagonal_a * diagonal_b) / 2,
+    side_length = pitagoras_diagonais(diagonal_a, diagonal_b);
+
+    return area / side_length;
+}
+
+double_t Geometricpp::Quadrilaterals::Rhombus::inradius() const {
+
+    double_t area = (diagonal_a * diagonal_b) / 2, 
+    side_length = pitagoras_diagonais(diagonal_a, diagonal_b);
+
+    double_t perimeter = 4 * side_length;
+
+    return area / perimeter;
+}
+
+double_t Geometricpp::Quadrilaterals::Rhombus::circumradius() const {
+    
 }
