@@ -70,5 +70,5 @@ double_t Geometricpp::Quadrilaterals::Rhombus::inradius() const {
 }
 
 double_t Geometricpp::Quadrilaterals::Rhombus::circumradius() const {
-    
+    // code   
 }
