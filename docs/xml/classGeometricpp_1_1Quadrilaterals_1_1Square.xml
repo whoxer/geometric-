@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="pt">
+  <compounddef id="classGeometricpp_1_1Quadrilaterals_1_1Square" kind="class" language="C++" prot="public">
+    <compoundname>Geometricpp::Quadrilaterals::Square</compoundname>
+    <includes refid="Geometricpp_8hpp" local="no">Geometricpp.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGeometricpp_1_1Quadrilaterals_1_1Square_1abdc082c4a138cc204a60710b37206c87" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_1ad1f5e8aebe3736bae7802b3e7cc9e6f7" kindref="member">GEOMETRIC_SIDE</ref></type>
+        <definition>GEOMETRIC_SIDE Geometricpp::Quadrilaterals::Square::side_length</definition>
+        <argsstring></argsstring>
+        <name>side_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="148" column="32" bodyfile="include/Geometricpp.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Square_a76d20ed6f48da403fb6a0c512db69215_1a76d20ed6f48da403fb6a0c512db69215" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Geometricpp::Quadrilaterals::Square::Square</definition>
+        <argsstring>(GEOMETRIC_SIDE side_length)</argsstring>
+        <name>Square</name>
+        <param>
+          <type><ref refid="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_1ad1f5e8aebe3736bae7802b3e7cc9e6f7" kindref="member">GEOMETRIC_SIDE</ref></type>
+          <declname>side_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="150" column="17" bodyfile="include/Geometricpp.hpp" bodystart="150" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Square_afd6ffd2407c97dd0fb28b29fc5ab883d_1afd6ffd2407c97dd0fb28b29fc5ab883d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Square::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="152" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="5" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Square_a45ef3b06266097a4d9dc2de129402544_1a45ef3b06266097a4d9dc2de129402544" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Square::area</definition>
+        <argsstring>() const</argsstring>
+        <name>area</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="154" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Square_a10469fbb72ee5ac9b867ca0fcd1f1617_1a10469fbb72ee5ac9b867ca0fcd1f1617" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Square::perimeter</definition>
+        <argsstring>() const</argsstring>
+        <name>perimeter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="155" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="13" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Square_ac4d245af431c4d9abbc23391eebcd358_1ac4d245af431c4d9abbc23391eebcd358" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Square::diagonal</definition>
+        <argsstring>() const</argsstring>
+        <name>diagonal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="156" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Representa um quadrado definido por um lado. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Esta classe encapsula a lógica para calcular propriedades de um quadrado, que é uma forma geométrica com todos os lados de igual comprimento.</para>
+<para>A classe possui os seguintes métodos:<itemizedlist>
+<listitem><para><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Square_afd6ffd2407c97dd0fb28b29fc5ab883d_1afd6ffd2407c97dd0fb28b29fc5ab883d" kindref="member">size()</ref>: Retorna o comprimento do lado do quadrado.</para>
+</listitem><listitem><para><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Square_a45ef3b06266097a4d9dc2de129402544_1a45ef3b06266097a4d9dc2de129402544" kindref="member">area()</ref>: Calcula e retorna a área do quadrado.</para>
+</listitem><listitem><para><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Square_a10469fbb72ee5ac9b867ca0fcd1f1617_1a10469fbb72ee5ac9b867ca0fcd1f1617" kindref="member">perimeter()</ref>: Calcula e retorna o perímetro do quadrado.</para>
+</listitem><listitem><para><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Square_ac4d245af431c4d9abbc23391eebcd358_1ac4d245af431c4d9abbc23391eebcd358" kindref="member">diagonal()</ref>: Calcula e retorna o comprimento da diagonal do quadrado.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>side_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Comprimento do lado do quadrado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="include/Geometricpp.hpp" line="145" column="9" bodyfile="include/Geometricpp.hpp" bodystart="146" bodyend="157"/>
+    <listofallmembers>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Square_a45ef3b06266097a4d9dc2de129402544_1a45ef3b06266097a4d9dc2de129402544" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Square</scope><name>area</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Square_ac4d245af431c4d9abbc23391eebcd358_1ac4d245af431c4d9abbc23391eebcd358" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Square</scope><name>diagonal</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Square_a10469fbb72ee5ac9b867ca0fcd1f1617_1a10469fbb72ee5ac9b867ca0fcd1f1617" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Square</scope><name>perimeter</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Square_1abdc082c4a138cc204a60710b37206c87" prot="private" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Square</scope><name>side_length</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Square_afd6ffd2407c97dd0fb28b29fc5ab883d_1afd6ffd2407c97dd0fb28b29fc5ab883d" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Square</scope><name>size</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Square_a76d20ed6f48da403fb6a0c512db69215_1a76d20ed6f48da403fb6a0c512db69215" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Square</scope><name>Square</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

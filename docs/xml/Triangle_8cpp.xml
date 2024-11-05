@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="pt">
+  <compounddef id="Triangle_8cpp" kind="file" language="C++">
+    <compoundname>Triangle.cpp</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>code</highlight></codeline>
+    </programlisting>
+    <location file="src/Triangle.cpp"/>
+  </compounddef>
+</doxygen>

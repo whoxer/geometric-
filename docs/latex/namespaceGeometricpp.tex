@@ -1,0 +1,99 @@
+\hypertarget{namespaceGeometricpp}{}\doxysection{Referência ao namespace Geometricpp}
+\label{namespaceGeometricpp}\index{Geometricpp@{Geometricpp}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceGeometricpp_1_1Quadrilaterals}{Quadrilaterals}}
+\item 
+ \mbox{\hyperlink{namespaceGeometricpp_1_1Triangles}{Triangles}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Definições de tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef double\+\_\+t \mbox{\hyperlink{namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_ad1f5e8aebe3736bae7802b3e7cc9e6f7}{GEOMETRIC\+\_\+\+SIDE}}
+\begin{DoxyCompactList}\small\item\em Tipo definido para lados de objetos geométricos planos. \end{DoxyCompactList}\item 
+typedef double\+\_\+t \mbox{\hyperlink{namespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc_aaef62d988311c3b588ee0393dd5be5dc}{DIAGONAL}}
+\begin{DoxyCompactList}\small\item\em Tipo definido para as diagonais de objetos geométricos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename length $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+arithmetic$<$ length $>$\+::value, length $>$\+::type \mbox{\hyperlink{namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d_a9aef6cfbf810f0731550e56b8eaeda8d}{pitagoras\+\_\+diagonais}} (length largest\+\_\+diagonal, length smallest\+\_\+diagonal)
+\begin{DoxyCompactList}\small\item\em Calcula a diagonal de um retângulo usando o teorema de Pitágoras. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Quadrilaterals_8cpp_a95ee97be00ff786a1fa345a8236ccbe4_a95ee97be00ff786a1fa345a8236ccbe4}{const}} double\+\_\+t \mbox{\hyperlink{namespaceGeometricpp_ac438df6430652b9663a49ff218fdf535_ac438df6430652b9663a49ff218fdf535}{PI}} = 3.\+141592654
+\begin{DoxyCompactList}\small\item\em Armazena o valor constante de PI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação dos tipos}
+\mbox{\Hypertarget{namespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc_aaef62d988311c3b588ee0393dd5be5dc}\label{namespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc_aaef62d988311c3b588ee0393dd5be5dc}} 
+\index{Geometricpp@{Geometricpp}!DIAGONAL@{DIAGONAL}}
+\index{DIAGONAL@{DIAGONAL}!Geometricpp@{Geometricpp}}
+\doxysubsubsection{\texorpdfstring{DIAGONAL}{DIAGONAL}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc_aaef62d988311c3b588ee0393dd5be5dc}{Geometricpp\+::\+DIAGONAL}}}
+
+
+
+Tipo definido para as diagonais de objetos geométricos. 
+
+Este tipo representa as diagonais de formas geométricas, sendo um alias para double\+\_\+t. \mbox{\Hypertarget{namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_ad1f5e8aebe3736bae7802b3e7cc9e6f7}\label{namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_ad1f5e8aebe3736bae7802b3e7cc9e6f7}} 
+\index{Geometricpp@{Geometricpp}!GEOMETRIC\_SIDE@{GEOMETRIC\_SIDE}}
+\index{GEOMETRIC\_SIDE@{GEOMETRIC\_SIDE}!Geometricpp@{Geometricpp}}
+\doxysubsubsection{\texorpdfstring{GEOMETRIC\_SIDE}{GEOMETRIC\_SIDE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_ad1f5e8aebe3736bae7802b3e7cc9e6f7}{Geometricpp\+::\+GEOMETRIC\+\_\+\+SIDE}}}
+
+
+
+Tipo definido para lados de objetos geométricos planos. 
+
+Este tipo representa os lados de formas geométricas, sendo um alias para double\+\_\+t. 
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d_a9aef6cfbf810f0731550e56b8eaeda8d}\label{namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d_a9aef6cfbf810f0731550e56b8eaeda8d}} 
+\index{Geometricpp@{Geometricpp}!pitagoras\_diagonais@{pitagoras\_diagonais}}
+\index{pitagoras\_diagonais@{pitagoras\_diagonais}!Geometricpp@{Geometricpp}}
+\doxysubsubsection{\texorpdfstring{pitagoras\_diagonais()}{pitagoras\_diagonais()}}
+{\footnotesize\ttfamily template$<$typename length $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+arithmetic$<$length$>$\+::value, length$>$\+::type Geometricpp\+::pitagoras\+\_\+diagonais (\begin{DoxyParamCaption}\item[{length}]{largest\+\_\+diagonal,  }\item[{length}]{smallest\+\_\+diagonal }\end{DoxyParamCaption})}
+
+
+
+Calcula a diagonal de um retângulo usando o teorema de Pitágoras. 
+
+Esta função recebe as duas diagonais de um retângulo e calcula o comprimento da diagonal resultante com base nas medidas fornecidas. O cálculo é feito usando o teorema de Pitágoras, considerando a maior diagonal como um dos catetos de um triângulo retângulo, e a menor diagonal como o outro cateto.
+
+
+\begin{DoxyTemplParams}{Parâmetros de template}
+{\em length} & Tipo numérico que deve ser aritmético (int, float, double, etc.).\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em largest\+\_\+diagonal} & O comprimento da maior diagonal do retângulo. Este valor deve ser maior que o comprimento da menor diagonal. \\
+\hline
+{\em smallest\+\_\+diagonal} & O comprimento da menor diagonal do retângulo. Este valor deve ser menor que o comprimento da maior diagonal.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O comprimento da diagonal resultante calculada.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepções}
+{\em std\+::invalid\+\_\+argument} & Se largest\+\_\+diagonal for menor ou igual a smallest\+\_\+diagonal. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Documentação das variáveis}
+\mbox{\Hypertarget{namespaceGeometricpp_ac438df6430652b9663a49ff218fdf535_ac438df6430652b9663a49ff218fdf535}\label{namespaceGeometricpp_ac438df6430652b9663a49ff218fdf535_ac438df6430652b9663a49ff218fdf535}} 
+\index{Geometricpp@{Geometricpp}!PI@{PI}}
+\index{PI@{PI}!Geometricpp@{Geometricpp}}
+\doxysubsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily Geometricpp\+::\+PI = 3.\+141592654}
+
+
+
+Armazena o valor constante de PI. 
+
+Esta constante é usada em cálculos geométricos que envolvem círculos e outras formas baseadas em pi. 

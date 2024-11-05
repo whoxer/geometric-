@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="pt">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Geometricpp</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/></para>
+<para>A biblioteca <computeroutput><ref refid="namespaceGeometricpp" kindref="compound">Geometricpp</ref></computeroutput> é uma biblioteca de geometria plana criada para o <computeroutput>C++</computeroutput>. Seu objetivo é o cálculo de objetos geométricas com um cunho de tornar mais prático e fácil o cálculo de geometria para o desenvolvimento de softwares na linguagem de programação <computeroutput>C++</computeroutput>.</para>
+<sect1 id="index_1autotoc_md1">
+<title>Namespaces</title>
+<para><itemizedlist>
+<listitem><para><ref refid="namespaceGeometricpp" kindref="compound">Geometricpp</ref></para>
+</listitem><listitem><para><ref refid="namespaceQuadrilaterals" kindref="compound">Quadrilaterals</ref></para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md2">
+<title>Classes</title>
+<para><itemizedlist>
+<listitem><para>Square</para>
+</listitem><listitem><para>Rectangle</para>
+</listitem><listitem><para>Rhombus</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md3">
+<title>Tipos definidos</title>
+<para><itemizedlist>
+<listitem><para>DIAGONAL : <ref refid="namespaceGeometricpp" kindref="compound">Geometricpp</ref></para>
+</listitem><listitem><para>GEOMETRIC_SIDE : <ref refid="namespaceGeometricpp" kindref="compound">Geometricpp</ref> </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

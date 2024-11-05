@@ -1,0 +1,35 @@
+\hypertarget{Quadrilaterals_8cpp}{}\doxysection{Referência ao ficheiro src/\+Quadrilaterals.cpp}
+\label{Quadrilaterals_8cpp}\index{src/Quadrilaterals.cpp@{src/Quadrilaterals.cpp}}
+{\ttfamily \#include \char`\"{}Geometricpp.\+hpp\char`\"{}}\newline
+Diagrama de dependências de inclusão para Quadrilaterals.\+cpp\+:
+% FIG 0
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+double\+\_\+t Geometricpp\+::\+Quadrilaterals\+::\+Rhombus\+::height \mbox{\hyperlink{Quadrilaterals_8cpp_a95ee97be00ff786a1fa345a8236ccbe4}{const}}
+\item 
+return area \mbox{\hyperlink{Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113}{side\+\_\+length}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das variáveis}
+\mbox{\Hypertarget{Quadrilaterals_8cpp_a95ee97be00ff786a1fa345a8236ccbe4}\label{Quadrilaterals_8cpp_a95ee97be00ff786a1fa345a8236ccbe4}} 
+\index{Quadrilaterals.cpp@{Quadrilaterals.cpp}!const@{const}}
+\index{const@{const}!Quadrilaterals.cpp@{Quadrilaterals.cpp}}
+\doxysubsubsection{\texorpdfstring{const}{const}}
+{\footnotesize\ttfamily double\+\_\+t Geometricpp\+::\+Quadrilaterals\+::\+Rhombus\+::height const}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    double\_t area = (diagonal\_a * diagonal\_b) / 2,}
+\DoxyCodeLine{    \mbox{\hyperlink{Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113}{side\_length}} = pitagoras\_diagonais(diagonal\_a, diagonal\_b)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113}\label{Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113}} 
+\index{Quadrilaterals.cpp@{Quadrilaterals.cpp}!side\_length@{side\_length}}
+\index{side\_length@{side\_length}!Quadrilaterals.cpp@{Quadrilaterals.cpp}}
+\doxysubsubsection{\texorpdfstring{side\_length}{side\_length}}
+{\footnotesize\ttfamily return area side\+\_\+length}
+

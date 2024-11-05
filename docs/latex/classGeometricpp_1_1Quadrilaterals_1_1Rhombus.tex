@@ -1,29 +1,91 @@
 \hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus}{}\doxysection{Referência à classe Geometricpp\+::Quadrilaterals\+::Rhombus}
 \label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus}\index{Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}}
+
+
+Classe que representa um losango e fornece métodos para calcular suas propriedades geométricas.  
+
+
+
+
+{\ttfamily \#include $<$Geometricpp.\+hpp$>$}
+
 \doxysubsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a7af353ecb427df3d15993ced0d4b2081}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a7af353ecb427df3d15993ced0d4b2081}} 
-{\bfseries Rhombus} (double\+\_\+t side, double\+\_\+t angle)
+\mbox{\hyperlink{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a7af353ecb427df3d15993ced0d4b2081_a7af353ecb427df3d15993ced0d4b2081}{Rhombus}} (double\+\_\+t side, double\+\_\+t angle)
 \item 
-\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a722afac4891be5f54083559be5e5314c}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a722afac4891be5f54083559be5e5314c}} 
-double\+\_\+t {\bfseries area} () const
+double\+\_\+t \mbox{\hyperlink{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a722afac4891be5f54083559be5e5314c_a722afac4891be5f54083559be5e5314c}{area}} () \mbox{\hyperlink{Quadrilaterals_8cpp_a95ee97be00ff786a1fa345a8236ccbe4_a95ee97be00ff786a1fa345a8236ccbe4}{const}}
 \item 
-\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94}} 
-double\+\_\+t {\bfseries perimeter} () const
+double\+\_\+t \mbox{\hyperlink{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94_a309dfefe4282516344e7f8f176403f94}{perimeter}} () \mbox{\hyperlink{Quadrilaterals_8cpp_a95ee97be00ff786a1fa345a8236ccbe4_a95ee97be00ff786a1fa345a8236ccbe4}{const}}
 \item 
-\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502}} 
-double\+\_\+t {\bfseries height} () const
+double\+\_\+t \mbox{\hyperlink{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502_aa8186d9856a675a068a3ea032b01d502}{height}} () \mbox{\hyperlink{Quadrilaterals_8cpp_a95ee97be00ff786a1fa345a8236ccbe4_a95ee97be00ff786a1fa345a8236ccbe4}{const}}
 \item 
-\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40}} 
-double\+\_\+t {\bfseries inradius} () const
+double\+\_\+t \mbox{\hyperlink{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40_ae50cb9c5cf3a9e9789cc08d5edf51d40}{inradius}} () \mbox{\hyperlink{Quadrilaterals_8cpp_a95ee97be00ff786a1fa345a8236ccbe4_a95ee97be00ff786a1fa345a8236ccbe4}{const}}
 \item 
-\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d}} 
-double\+\_\+t {\bfseries circumradius} () const
+double\+\_\+t \mbox{\hyperlink{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d_a3aab040ff38ba1444a3e310ba96c257d}{circumradius}} () \mbox{\hyperlink{Quadrilaterals_8cpp_a95ee97be00ff786a1fa345a8236ccbe4_a95ee97be00ff786a1fa345a8236ccbe4}{const}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um losango e fornece métodos para calcular suas propriedades geométricas. 
+
+Esta classe utiliza as diagonais do losango, que são calculadas com base no comprimento do lado e no ângulo fornecido. A classe fornece funções para calcular a área, o perímetro, a altura, o raio interno e o raio circunscrito do losango.
+
+\begin{DoxyNote}{Nota}
+As diagonais são calculadas usando as seguintes fórmulas\+:
+\begin{DoxyItemize}
+\item diagonal\+\_\+a = lado $\ast$ sqrt(2 $\ast$ (1 + cos(angulo)));
+\item diagonal\+\_\+b = lado $\ast$ sqrt(2 $\ast$ (1 -\/ cos(angulo)));
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxyWarning}{Aviso}
+O ângulo deve ser fornecido em radianos. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a7af353ecb427df3d15993ced0d4b2081_a7af353ecb427df3d15993ced0d4b2081}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a7af353ecb427df3d15993ced0d4b2081_a7af353ecb427df3d15993ced0d4b2081}} 
+\index{Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}!Rhombus@{Rhombus}}
+\index{Rhombus@{Rhombus}!Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}}
+\doxysubsubsection{\texorpdfstring{Rhombus()}{Rhombus()}}
+{\footnotesize\ttfamily Geometricpp\+::\+Quadrilaterals\+::\+Rhombus\+::\+Rhombus (\begin{DoxyParamCaption}\item[{double\+\_\+t}]{side,  }\item[{double\+\_\+t}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Documentação dos métodos}
+\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a722afac4891be5f54083559be5e5314c_a722afac4891be5f54083559be5e5314c}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a722afac4891be5f54083559be5e5314c_a722afac4891be5f54083559be5e5314c}} 
+\index{Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}!area@{area}}
+\index{area@{area}!Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily double\+\_\+t Geometricpp\+::\+Quadrilaterals\+::\+Rhombus\+::area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d_a3aab040ff38ba1444a3e310ba96c257d}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d_a3aab040ff38ba1444a3e310ba96c257d}} 
+\index{Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}!circumradius@{circumradius}}
+\index{circumradius@{circumradius}!Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}}
+\doxysubsubsection{\texorpdfstring{circumradius()}{circumradius()}}
+{\footnotesize\ttfamily double\+\_\+t Geometricpp\+::\+Quadrilaterals\+::\+Rhombus\+::circumradius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502_aa8186d9856a675a068a3ea032b01d502}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502_aa8186d9856a675a068a3ea032b01d502}} 
+\index{Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}!height@{height}}
+\index{height@{height}!Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily double\+\_\+t Geometricpp\+::\+Quadrilaterals\+::\+Rhombus\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40_ae50cb9c5cf3a9e9789cc08d5edf51d40}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40_ae50cb9c5cf3a9e9789cc08d5edf51d40}} 
+\index{Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}!inradius@{inradius}}
+\index{inradius@{inradius}!Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}}
+\doxysubsubsection{\texorpdfstring{inradius()}{inradius()}}
+{\footnotesize\ttfamily double\+\_\+t Geometricpp\+::\+Quadrilaterals\+::\+Rhombus\+::inradius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94_a309dfefe4282516344e7f8f176403f94}\label{classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94_a309dfefe4282516344e7f8f176403f94}} 
+\index{Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}!perimeter@{perimeter}}
+\index{perimeter@{perimeter}!Geometricpp::Quadrilaterals::Rhombus@{Geometricpp::Quadrilaterals::Rhombus}}
+\doxysubsubsection{\texorpdfstring{perimeter()}{perimeter()}}
+{\footnotesize\ttfamily double\+\_\+t Geometricpp\+::\+Quadrilaterals\+::\+Rhombus\+::perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 
 
 A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
-include/Geometricpp.\+hpp\item 
-src/Quadrilaterals.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{Geometricpp_8hpp}{Geometricpp.\+hpp}}\item 
+src/\mbox{\hyperlink{Quadrilaterals_8cpp}{Quadrilaterals.\+cpp}}\end{DoxyCompactItemize}

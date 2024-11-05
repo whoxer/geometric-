@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="pt">
+  <compounddef id="namespaceGeometricpp" kind="namespace" language="C++">
+    <compoundname>Geometricpp</compoundname>
+    <innernamespace refid="namespaceGeometricpp_1_1Quadrilaterals">Geometricpp::Quadrilaterals</innernamespace>
+    <innernamespace refid="namespaceGeometricpp_1_1Triangles">Geometricpp::Triangles</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_1ad1f5e8aebe3736bae7802b3e7cc9e6f7" prot="public" static="no">
+        <type>double_t</type>
+        <definition>Geometricpp::GEOMETRIC_SIDE</definition>
+        <argsstring></argsstring>
+        <name>GEOMETRIC_SIDE</name>
+        <briefdescription>
+<para>Tipo definido para lados de objetos geométricos planos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Este tipo representa os lados de formas geométricas, sendo um alias para double_t. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="38" column="22" bodyfile="include/Geometricpp.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc_1aaef62d988311c3b588ee0393dd5be5dc" prot="public" static="no">
+        <type>double_t</type>
+        <definition>Geometricpp::DIAGONAL</definition>
+        <argsstring></argsstring>
+        <name>DIAGONAL</name>
+        <briefdescription>
+<para>Tipo definido para as diagonais de objetos geométricos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Este tipo representa as diagonais de formas geométricas, sendo um alias para double_t. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="47" column="22" bodyfile="include/Geometricpp.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceGeometricpp_ac438df6430652b9663a49ff218fdf535_1ac438df6430652b9663a49ff218fdf535" prot="public" static="no" mutable="no">
+        <type><ref refid="Quadrilaterals_8cpp_a95ee97be00ff786a1fa345a8236ccbe4_1a95ee97be00ff786a1fa345a8236ccbe4" kindref="member">const</ref> double_t</type>
+        <definition>Geometricpp::PI</definition>
+        <argsstring></argsstring>
+        <name>PI</name>
+        <initializer>= 3.141592654</initializer>
+        <briefdescription>
+<para>Armazena o valor constante de PI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Esta constante é usada em cálculos geométricos que envolvem círculos e outras formas baseadas em pi. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="56" column="20" bodyfile="include/Geometricpp.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d_1a9aef6cfbf810f0731550e56b8eaeda8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename length</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_arithmetic&lt; length &gt;::value, length &gt;::type</type>
+        <definition>std::enable_if&lt;std::is_arithmetic&lt;length&gt;::value, length&gt;::type Geometricpp::pitagoras_diagonais</definition>
+        <argsstring>(length largest_diagonal, length smallest_diagonal)</argsstring>
+        <name>pitagoras_diagonais</name>
+        <param>
+          <type>length</type>
+          <declname>largest_diagonal</declname>
+        </param>
+        <param>
+          <type>length</type>
+          <declname>smallest_diagonal</declname>
+        </param>
+        <briefdescription>
+<para>Calcula a diagonal de um retângulo usando o teorema de Pitágoras. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Esta função recebe as duas diagonais de um retângulo e calcula o comprimento da diagonal resultante com base nas medidas fornecidas. O cálculo é feito usando o teorema de Pitágoras, considerando a maior diagonal como um dos catetos de um triângulo retângulo, e a menor diagonal como o outro cateto.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tipo numérico que deve ser aritmético (int, float, double, etc.).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>largest_diagonal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>O comprimento da maior diagonal do retângulo. Este valor deve ser maior que o comprimento da menor diagonal. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>smallest_diagonal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>O comprimento da menor diagonal do retângulo. Este valor deve ser menor que o comprimento da maior diagonal.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>O comprimento da diagonal resultante calculada.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se largest_diagonal for menor ou igual a smallest_diagonal. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="80" column="5" bodyfile="include/Geometricpp.hpp" bodystart="80" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Geometricpp.hpp" line="28" column="1"/>
+  </compounddef>
+</doxygen>

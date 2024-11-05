@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="pt">
+  <compounddef id="classGeometricpp_1_1Quadrilaterals_1_1Rectangle" kind="class" language="C++" prot="public">
+    <compoundname>Geometricpp::Quadrilaterals::Rectangle</compoundname>
+    <includes refid="Geometricpp_8hpp" local="no">Geometricpp.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_1aaa11ed42df826bf6fa0ee900ba60b630" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_1ad1f5e8aebe3736bae7802b3e7cc9e6f7" kindref="member">GEOMETRIC_SIDE</ref></type>
+        <definition>GEOMETRIC_SIDE Geometricpp::Quadrilaterals::Rectangle::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="179" column="32" bodyfile="include/Geometricpp.hpp" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_1abaf5396da86efc0bc58e205542c4420b" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_1ad1f5e8aebe3736bae7802b3e7cc9e6f7" kindref="member">GEOMETRIC_SIDE</ref></type>
+        <definition>GEOMETRIC_SIDE Geometricpp::Quadrilaterals::Rectangle::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="179" column="39" bodyfile="include/Geometricpp.hpp" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a921f98b8b0714be04f616947a66bae59_1a921f98b8b0714be04f616947a66bae59" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Geometricpp::Quadrilaterals::Rectangle::Rectangle</definition>
+        <argsstring>(GEOMETRIC_SIDE h, GEOMETRIC_SIDE w)</argsstring>
+        <name>Rectangle</name>
+        <param>
+          <type><ref refid="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_1ad1f5e8aebe3736bae7802b3e7cc9e6f7" kindref="member">GEOMETRIC_SIDE</ref></type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_1ad1f5e8aebe3736bae7802b3e7cc9e6f7" kindref="member">GEOMETRIC_SIDE</ref></type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="182" column="26" bodyfile="include/Geometricpp.hpp" bodystart="182" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa3f3fefff5816f9af60bf8af12562d00_1aa3f3fefff5816f9af60bf8af12562d00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; <ref refid="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_1ad1f5e8aebe3736bae7802b3e7cc9e6f7" kindref="member">Geometricpp::GEOMETRIC_SIDE</ref>, <ref refid="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_1ad1f5e8aebe3736bae7802b3e7cc9e6f7" kindref="member">Geometricpp::GEOMETRIC_SIDE</ref> &gt;</type>
+        <definition>std::pair&lt; Geometricpp::GEOMETRIC_SIDE, Geometricpp::GEOMETRIC_SIDE &gt; Geometricpp::Quadrilaterals::Rectangle::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="190" column="27" bodyfile="src/Quadrilaterals.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aff965981b053fd7cbd603a8fc3089833_1aff965981b053fd7cbd603a8fc3089833" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Rectangle::area</definition>
+        <argsstring>() const</argsstring>
+        <name>area</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="192" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a704c522e029cce65bc668e3db9dd5800_1a704c522e029cce65bc668e3db9dd5800" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Rectangle::perimeter</definition>
+        <argsstring>() const</argsstring>
+        <name>perimeter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="193" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa591e63c23f491a835ddc89755ba0eaa_1aa591e63c23f491a835ddc89755ba0eaa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Rectangle::diagonal</definition>
+        <argsstring>() const</argsstring>
+        <name>diagonal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="194" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Representa um retângulo definido por dois lados (altura e largura). </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Esta classe encapsula a lógica para garantir que um retângulo não possa ser criado com lados iguais, prevenindo a formação de um quadrado.</para>
+<para>A classe possui os seguintes métodos:<itemizedlist>
+<listitem><para><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa3f3fefff5816f9af60bf8af12562d00_1aa3f3fefff5816f9af60bf8af12562d00" kindref="member">size()</ref>: Retorna um par contendo a altura e a largura do retângulo.</para>
+</listitem><listitem><para><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aff965981b053fd7cbd603a8fc3089833_1aff965981b053fd7cbd603a8fc3089833" kindref="member">area()</ref>: Calcula e retorna a área do retângulo.</para>
+</listitem><listitem><para><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a704c522e029cce65bc668e3db9dd5800_1a704c522e029cce65bc668e3db9dd5800" kindref="member">perimeter()</ref>: Calcula e retorna o perímetro do retângulo.</para>
+</listitem><listitem><para><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa591e63c23f491a835ddc89755ba0eaa_1aa591e63c23f491a835ddc89755ba0eaa" kindref="member">diagonal()</ref>: Calcula e retorna o comprimento da diagonal do retângulo.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Altura do retângulo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Largura do retângulo. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Se os lados fornecidos forem iguais. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="include/Geometricpp.hpp" line="176" column="9" bodyfile="include/Geometricpp.hpp" bodystart="177" bodyend="195"/>
+    <listofallmembers>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aff965981b053fd7cbd603a8fc3089833_1aff965981b053fd7cbd603a8fc3089833" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rectangle</scope><name>area</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa591e63c23f491a835ddc89755ba0eaa_1aa591e63c23f491a835ddc89755ba0eaa" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rectangle</scope><name>diagonal</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_1aaa11ed42df826bf6fa0ee900ba60b630" prot="private" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rectangle</scope><name>height</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a704c522e029cce65bc668e3db9dd5800_1a704c522e029cce65bc668e3db9dd5800" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rectangle</scope><name>perimeter</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a921f98b8b0714be04f616947a66bae59_1a921f98b8b0714be04f616947a66bae59" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rectangle</scope><name>Rectangle</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa3f3fefff5816f9af60bf8af12562d00_1aa3f3fefff5816f9af60bf8af12562d00" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rectangle</scope><name>size</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_1abaf5396da86efc0bc58e205542c4420b" prot="private" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rectangle</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

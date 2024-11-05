@@ -71,7 +71,7 @@ $(function() {
 <div class="title">Geometricpp.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Geometricpp - escrito por @whoxer */</span></div>
+<a href="Geometricpp_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Geometricpp - escrito por @whoxer */</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*  This program is free software: you can redistribute it and/or modify</span></div>
@@ -98,142 +98,126 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>Geometricpp </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespaceGeometricpp.html">   28</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceGeometricpp.html">Geometricpp</a> </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// Tipos definidos.</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">typedef</span> double_t GEOMETRIC_SIDE;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">typedef</span> double_t DIAGONAL;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// ``PI`` Armazena constante valor de PI</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">const</span> double_t PI = 3.141592654;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">/* Teorema de Pitágoras aplicada a Diagonais</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">     *  Calcula e retorna o comprimento dos lados usando as diagonais</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">     *  de quatro triângulos retângulos.</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">     * </span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">     *  exemplo:</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">     *       </span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">     *      L² = (D / 2)² + (d / 2)²</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">     * </span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">     * </span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">     *      ...</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> length&gt; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">typename</span> std::enable_if&lt;std::is_arithmetic&lt;length&gt;::value, length&gt;::type </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    pitagoras_diagonais(length largest_diagonal, length smallest_diagonal) </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> (largest_diagonal &lt; smallest_diagonal)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;largest_diagonal parameter cannot be smaller than smallest_diagonal parameter&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> sqrt((largest_diagonal / 2) * (largest_diagonal / 2) + </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    (smallest_diagonal / 2) * (smallest_diagonal / 2));</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// TODO* Implementar assim que terminar losango.</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">/* Teorema de Pitágoras</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    *  </span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    *  a² = b² + c²</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// template &lt;typename hipotenusa, &gt;</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// typename std::enable_if&lt;std::is_arithmetic&lt;hipotenusa&gt;::value, hipotenusa&gt;::type</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// pitagoras()</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">     * O namespace ``Quadrilaterals`` é responsável por agrupar as funções que</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">     * realizam cálculos relacionados a objetos geométricos planos do tipo quadrilátero.</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">     * Quadriláteros são figuras geométricas com quatro lados e ângulos internos que</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">     * somam 360 graus, sendo representados por tipos específicos como o &quot;Quadrado&quot;</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">     * e o &quot;Retângulo&quot;, entre outros.</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">     * Este namespace serve para organizar o código de maneira lógica, separando as</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">     * funções de cálculo associadas a quadriláteros em uma única área. Isso facilita</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">     * a manutenção do código e evita conflitos de nomes com outras funções ou classes</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">     * que não estão relacionadas a quadriláteros.</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">     * Funções dentro deste namespace podem incluir:</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">     * - Cálculo de área: diferentes fórmulas para quadrados, retângulos e outros tipos</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">     *   de quadriláteros.</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">     * - Cálculo de perímetro: soma dos comprimentos de todos os lados de um quadrilátero.</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">     * - Verificação de propriedades: funções que verificam se um quadrilátero é regular,</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">     *   ou se os lados opostos são paralelos, por exemplo.</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">     * Ao agrupar essas funcionalidades no namespace &quot;Quadrilaterals&quot;, o código se torna</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">     * modular e organizado, permitindo fácil expansão e reutilização. Um usuário da</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">     * biblioteca pode acessar todas as funções relacionadas a quadriláteros usando o</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">     * prefixo &quot;Quadrilaterals::&quot;, o que melhora a legibilidade e claridade do código.</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">namespace </span>Quadrilaterals </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classGeometricpp_1_1Quadrilaterals_1_1Square.html">  116</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Square.html">Square</a> </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                GEOMETRIC_SIDE side_length;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Square.html">Square</a>(GEOMETRIC_SIDE side_length) : side_length(side_length) {};</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                double_t size() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                double_t area() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                double_t perimeter() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                double_t diagonal() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        };</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle.html">  147</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle.html">Rectangle</a> </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                GEOMETRIC_SIDE height, width;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7.html#ad1f5e8aebe3736bae7802b3e7cc9e6f7">   38</a></span>&#160;    <span class="keyword">typedef</span> double_t <a class="code" href="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7.html#ad1f5e8aebe3736bae7802b3e7cc9e6f7">GEOMETRIC_SIDE</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="namespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc.html#aaef62d988311c3b588ee0393dd5be5dc">   47</a></span>&#160;    <span class="keyword">typedef</span> double_t <a class="code" href="namespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc.html#aaef62d988311c3b588ee0393dd5be5dc">DIAGONAL</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespaceGeometricpp_ac438df6430652b9663a49ff218fdf535.html#ac438df6430652b9663a49ff218fdf535">   56</a></span>&#160;    <span class="keyword">const</span> double_t <a class="code" href="namespaceGeometricpp_ac438df6430652b9663a49ff218fdf535.html#ac438df6430652b9663a49ff218fdf535">PI</a> = 3.141592654;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> length&gt; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">typename</span> std::enable_if&lt;std::is_arithmetic&lt;length&gt;::value, length&gt;::type </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d.html#a9aef6cfbf810f0731550e56b8eaeda8d">   80</a></span>&#160;    <a class="code" href="namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d.html#a9aef6cfbf810f0731550e56b8eaeda8d">pitagoras_diagonais</a>(length largest_diagonal, length smallest_diagonal) </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span> (largest_diagonal &lt; smallest_diagonal)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;largest_diagonal parameter cannot be smaller than smallest_diagonal parameter&quot;</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> sqrt((largest_diagonal / 2) * (largest_diagonal / 2) + </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    (smallest_diagonal / 2) * (smallest_diagonal / 2));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// TODO* Implementar assim que terminar losango.</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">/* Teorema de Pitágoras</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">    *  </span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">    *  a² = b² + c²</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// template &lt;typename hipotenusa, &gt;</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">// typename std::enable_if&lt;std::is_arithmetic&lt;hipotenusa&gt;::value, hipotenusa&gt;::type</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// pitagoras()</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="namespaceGeometricpp_1_1Quadrilaterals.html">  128</a></span>&#160;    <span class="keyword">namespace </span><a class="code" href="namespaceQuadrilaterals.html">Quadrilaterals</a> </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classGeometricpp_1_1Quadrilaterals_1_1Square.html">  145</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Square.html">Square</a> </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <a class="code" href="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7.html#ad1f5e8aebe3736bae7802b3e7cc9e6f7">GEOMETRIC_SIDE</a> side_length;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classGeometricpp_1_1Quadrilaterals_1_1Square_a76d20ed6f48da403fb6a0c512db69215.html#a76d20ed6f48da403fb6a0c512db69215">  150</a></span>&#160;                <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Square_a76d20ed6f48da403fb6a0c512db69215.html#a76d20ed6f48da403fb6a0c512db69215">Square</a>(<a class="code" href="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7.html#ad1f5e8aebe3736bae7802b3e7cc9e6f7">GEOMETRIC_SIDE</a> side_length) : <a class="code" href="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113.html#afd5e1e8f4a6985932be5ffc335890113">side_length</a>(<a class="code" href="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113.html#afd5e1e8f4a6985932be5ffc335890113">side_length</a>) {};</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <span class="keyword">explicit</span> <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle.html">Rectangle</a>(GEOMETRIC_SIDE h, GEOMETRIC_SIDE w) : height(h), width(w) </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    <span class="keywordflow">if</span> (height == width) </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                    {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Sides can&#39;t be equal, at least one needs to be different.&quot;</span>);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                    }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                std::pair&lt;Geometricpp::GEOMETRIC_SIDE, Geometricpp::GEOMETRIC_SIDE&gt; size() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                double_t area() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                double_t perimeter() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                double_t diagonal() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        };</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus.html">  168</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus.html">Rhombus</a> </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                DIAGONAL diagonal_a, diagonal_b;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <span class="keyword">explicit</span> <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus.html">Rhombus</a>(double_t side, double_t angle) {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                    diagonal_a = side * sqrt(2 * (1 + cos(angle)));</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    diagonal_b = side * sqrt(2 * (1 - cos(angle)));</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                double_t area() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                double_t perimeter() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                double_t height() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                double_t inradius() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                double_t circumradius() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        };</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    };</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">// TODO</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">namespace </span>Triangles {};</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Square_afd6ffd2407c97dd0fb28b29fc5ab883d.html#afd6ffd2407c97dd0fb28b29fc5ab883d">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Square_a45ef3b06266097a4d9dc2de129402544.html#a45ef3b06266097a4d9dc2de129402544">area</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Square_a10469fbb72ee5ac9b867ca0fcd1f1617.html#a10469fbb72ee5ac9b867ca0fcd1f1617">perimeter</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Square_ac4d245af431c4d9abbc23391eebcd358.html#ac4d245af431c4d9abbc23391eebcd358">diagonal</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        };</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle.html">  176</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle.html">Rectangle</a> </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <a class="code" href="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7.html#ad1f5e8aebe3736bae7802b3e7cc9e6f7">GEOMETRIC_SIDE</a> height, width;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a921f98b8b0714be04f616947a66bae59.html#a921f98b8b0714be04f616947a66bae59">  182</a></span>&#160;                <span class="keyword">explicit</span> <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a921f98b8b0714be04f616947a66bae59.html#a921f98b8b0714be04f616947a66bae59">Rectangle</a>(<a class="code" href="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7.html#ad1f5e8aebe3736bae7802b3e7cc9e6f7">GEOMETRIC_SIDE</a> h, <a class="code" href="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7.html#ad1f5e8aebe3736bae7802b3e7cc9e6f7">GEOMETRIC_SIDE</a> w) : height(h), width(w) </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                    <span class="keywordflow">if</span> (height == width) </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Sides can&#39;t be equal, at least one needs to be different.&quot;</span>);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                    }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                std::pair&lt;Geometricpp::GEOMETRIC_SIDE, Geometricpp::GEOMETRIC_SIDE&gt; <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa3f3fefff5816f9af60bf8af12562d00.html#aa3f3fefff5816f9af60bf8af12562d00">size</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rectangle_html"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle.html">Geometricpp::Quadrilaterals::Rectangle</a></div><div class="ttdoc">Representa um retângulo definido por dois lados (altura e largura).</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:148</div></div>
-<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rhombus_html"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus.html">Geometricpp::Quadrilaterals::Rhombus</a></div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:169</div></div>
-<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Square_html"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Square.html">Geometricpp::Quadrilaterals::Square</a></div><div class="ttdoc">Representa um quadrado definido por um lado.</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:117</div></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aff965981b053fd7cbd603a8fc3089833.html#aff965981b053fd7cbd603a8fc3089833">area</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a704c522e029cce65bc668e3db9dd5800.html#a704c522e029cce65bc668e3db9dd5800">perimeter</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa591e63c23f491a835ddc89755ba0eaa.html#aa591e63c23f491a835ddc89755ba0eaa">diagonal</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        };</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus.html">  211</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus.html">Rhombus</a> </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <a class="code" href="namespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc.html#aaef62d988311c3b588ee0393dd5be5dc">DIAGONAL</a> diagonal_a, diagonal_b;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a7af353ecb427df3d15993ced0d4b2081.html#a7af353ecb427df3d15993ced0d4b2081">  216</a></span>&#160;                <span class="keyword">explicit</span> <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a7af353ecb427df3d15993ced0d4b2081.html#a7af353ecb427df3d15993ced0d4b2081">Rhombus</a>(double_t side, double_t angle) {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                    diagonal_a = side * sqrt(2 * (1 + cos(angle)));</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                    diagonal_b = side * sqrt(2 * (1 - cos(angle)));</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a722afac4891be5f54083559be5e5314c.html#a722afac4891be5f54083559be5e5314c">area</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94.html#a309dfefe4282516344e7f8f176403f94">perimeter</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502.html#aa8186d9856a675a068a3ea032b01d502">  223</a></span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502.html#aa8186d9856a675a068a3ea032b01d502">height</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40.html#ae50cb9c5cf3a9e9789cc08d5edf51d40">inradius</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                double_t <a class="code" href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d.html#a3aab040ff38ba1444a3e310ba96c257d">circumradius</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        };</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    };</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="comment">// TODO</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="namespaceGeometricpp_1_1Triangles.html">  231</a></span>&#160;    <span class="keyword">namespace </span>Triangles {};</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aQuadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_html_afd5e1e8f4a6985932be5ffc335890113"><div class="ttname"><a href="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113.html#afd5e1e8f4a6985932be5ffc335890113">side_length</a></div><div class="ttdeci">return area side_length</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:59</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rectangle_a704c522e029cce65bc668e3db9dd5800_html_a704c522e029cce65bc668e3db9dd5800"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a704c522e029cce65bc668e3db9dd5800.html#a704c522e029cce65bc668e3db9dd5800">Geometricpp::Quadrilaterals::Rectangle::perimeter</a></div><div class="ttdeci">double_t perimeter() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:33</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rectangle_a921f98b8b0714be04f616947a66bae59_html_a921f98b8b0714be04f616947a66bae59"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a921f98b8b0714be04f616947a66bae59.html#a921f98b8b0714be04f616947a66bae59">Geometricpp::Quadrilaterals::Rectangle::Rectangle</a></div><div class="ttdeci">Rectangle(GEOMETRIC_SIDE h, GEOMETRIC_SIDE w)</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:182</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa3f3fefff5816f9af60bf8af12562d00_html_aa3f3fefff5816f9af60bf8af12562d00"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa3f3fefff5816f9af60bf8af12562d00.html#aa3f3fefff5816f9af60bf8af12562d00">Geometricpp::Quadrilaterals::Rectangle::size</a></div><div class="ttdeci">std::pair&lt; Geometricpp::GEOMETRIC_SIDE, Geometricpp::GEOMETRIC_SIDE &gt; size() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:25</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa591e63c23f491a835ddc89755ba0eaa_html_aa591e63c23f491a835ddc89755ba0eaa"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa591e63c23f491a835ddc89755ba0eaa.html#aa591e63c23f491a835ddc89755ba0eaa">Geometricpp::Quadrilaterals::Rectangle::diagonal</a></div><div class="ttdeci">double_t diagonal() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:37</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rectangle_aff965981b053fd7cbd603a8fc3089833_html_aff965981b053fd7cbd603a8fc3089833"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aff965981b053fd7cbd603a8fc3089833.html#aff965981b053fd7cbd603a8fc3089833">Geometricpp::Quadrilaterals::Rectangle::area</a></div><div class="ttdeci">double_t area() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:29</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rectangle_html"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rectangle.html">Geometricpp::Quadrilaterals::Rectangle</a></div><div class="ttdoc">Representa um retângulo definido por dois lados (altura e largura).</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:177</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94_html_a309dfefe4282516344e7f8f176403f94"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94.html#a309dfefe4282516344e7f8f176403f94">Geometricpp::Quadrilaterals::Rhombus::perimeter</a></div><div class="ttdeci">double_t perimeter() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:50</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d_html_a3aab040ff38ba1444a3e310ba96c257d"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d.html#a3aab040ff38ba1444a3e310ba96c257d">Geometricpp::Quadrilaterals::Rhombus::circumradius</a></div><div class="ttdeci">double_t circumradius() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:72</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rhombus_a722afac4891be5f54083559be5e5314c_html_a722afac4891be5f54083559be5e5314c"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a722afac4891be5f54083559be5e5314c.html#a722afac4891be5f54083559be5e5314c">Geometricpp::Quadrilaterals::Rhombus::area</a></div><div class="ttdeci">double_t area() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:46</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rhombus_a7af353ecb427df3d15993ced0d4b2081_html_a7af353ecb427df3d15993ced0d4b2081"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a7af353ecb427df3d15993ced0d4b2081.html#a7af353ecb427df3d15993ced0d4b2081">Geometricpp::Quadrilaterals::Rhombus::Rhombus</a></div><div class="ttdeci">Rhombus(double_t side, double_t angle)</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:216</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502_html_aa8186d9856a675a068a3ea032b01d502"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502.html#aa8186d9856a675a068a3ea032b01d502">Geometricpp::Quadrilaterals::Rhombus::height</a></div><div class="ttdeci">double_t height() const</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40_html_ae50cb9c5cf3a9e9789cc08d5edf51d40"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40.html#ae50cb9c5cf3a9e9789cc08d5edf51d40">Geometricpp::Quadrilaterals::Rhombus::inradius</a></div><div class="ttdeci">double_t inradius() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:62</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Rhombus_html"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Rhombus.html">Geometricpp::Quadrilaterals::Rhombus</a></div><div class="ttdoc">Classe que representa um losango e fornece métodos para calcular suas propriedades geométricas.</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:212</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Square_a10469fbb72ee5ac9b867ca0fcd1f1617_html_a10469fbb72ee5ac9b867ca0fcd1f1617"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Square_a10469fbb72ee5ac9b867ca0fcd1f1617.html#a10469fbb72ee5ac9b867ca0fcd1f1617">Geometricpp::Quadrilaterals::Square::perimeter</a></div><div class="ttdeci">double_t perimeter() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:13</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Square_a45ef3b06266097a4d9dc2de129402544_html_a45ef3b06266097a4d9dc2de129402544"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Square_a45ef3b06266097a4d9dc2de129402544.html#a45ef3b06266097a4d9dc2de129402544">Geometricpp::Quadrilaterals::Square::area</a></div><div class="ttdeci">double_t area() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:9</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Square_a76d20ed6f48da403fb6a0c512db69215_html_a76d20ed6f48da403fb6a0c512db69215"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Square_a76d20ed6f48da403fb6a0c512db69215.html#a76d20ed6f48da403fb6a0c512db69215">Geometricpp::Quadrilaterals::Square::Square</a></div><div class="ttdeci">Square(GEOMETRIC_SIDE side_length)</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:150</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Square_ac4d245af431c4d9abbc23391eebcd358_html_ac4d245af431c4d9abbc23391eebcd358"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Square_ac4d245af431c4d9abbc23391eebcd358.html#ac4d245af431c4d9abbc23391eebcd358">Geometricpp::Quadrilaterals::Square::diagonal</a></div><div class="ttdeci">double_t diagonal() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:16</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Square_afd6ffd2407c97dd0fb28b29fc5ab883d_html_afd6ffd2407c97dd0fb28b29fc5ab883d"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Square_afd6ffd2407c97dd0fb28b29fc5ab883d.html#afd6ffd2407c97dd0fb28b29fc5ab883d">Geometricpp::Quadrilaterals::Square::size</a></div><div class="ttdeci">double_t size() const</div><div class="ttdef"><b>Definition:</b> Quadrilaterals.cpp:5</div></div>
+<div class="ttc" id="aclassGeometricpp_1_1Quadrilaterals_1_1Square_html"><div class="ttname"><a href="classGeometricpp_1_1Quadrilaterals_1_1Square.html">Geometricpp::Quadrilaterals::Square</a></div><div class="ttdoc">Representa um quadrado definido por um lado.</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:146</div></div>
+<div class="ttc" id="anamespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d_html_a9aef6cfbf810f0731550e56b8eaeda8d"><div class="ttname"><a href="namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d.html#a9aef6cfbf810f0731550e56b8eaeda8d">Geometricpp::pitagoras_diagonais</a></div><div class="ttdeci">std::enable_if&lt; std::is_arithmetic&lt; length &gt;::value, length &gt;::type pitagoras_diagonais(length largest_diagonal, length smallest_diagonal)</div><div class="ttdoc">Calcula a diagonal de um retângulo usando o teorema de Pitágoras.</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:80</div></div>
+<div class="ttc" id="anamespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc_html_aaef62d988311c3b588ee0393dd5be5dc"><div class="ttname"><a href="namespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc.html#aaef62d988311c3b588ee0393dd5be5dc">Geometricpp::DIAGONAL</a></div><div class="ttdeci">double_t DIAGONAL</div><div class="ttdoc">Tipo definido para as diagonais de objetos geométricos.</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:47</div></div>
+<div class="ttc" id="anamespaceGeometricpp_ac438df6430652b9663a49ff218fdf535_html_ac438df6430652b9663a49ff218fdf535"><div class="ttname"><a href="namespaceGeometricpp_ac438df6430652b9663a49ff218fdf535.html#ac438df6430652b9663a49ff218fdf535">Geometricpp::PI</a></div><div class="ttdeci">const double_t PI</div><div class="ttdoc">Armazena o valor constante de PI.</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:56</div></div>
+<div class="ttc" id="anamespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7_html_ad1f5e8aebe3736bae7802b3e7cc9e6f7"><div class="ttname"><a href="namespaceGeometricpp_ad1f5e8aebe3736bae7802b3e7cc9e6f7.html#ad1f5e8aebe3736bae7802b3e7cc9e6f7">Geometricpp::GEOMETRIC_SIDE</a></div><div class="ttdeci">double_t GEOMETRIC_SIDE</div><div class="ttdoc">Tipo definido para lados de objetos geométricos planos.</div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:38</div></div>
+<div class="ttc" id="anamespaceGeometricpp_html"><div class="ttname"><a href="namespaceGeometricpp.html">Geometricpp</a></div><div class="ttdef"><b>Definition:</b> Geometricpp.hpp:29</div></div>
+<div class="ttc" id="anamespaceQuadrilaterals_html"><div class="ttname"><a href="namespaceQuadrilaterals.html">Quadrilaterals</a></div><div class="ttdoc">O namespace Quadrilaterals é responsável por agrupar as funções que realizam cálculos relacionados a ...</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

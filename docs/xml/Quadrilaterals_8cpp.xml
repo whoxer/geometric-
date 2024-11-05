@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="pt">
+  <compounddef id="Quadrilaterals_8cpp" kind="file" language="C++">
+    <compoundname>Quadrilaterals.cpp</compoundname>
+    <includes refid="Geometricpp_8hpp" local="yes">Geometricpp.hpp</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Geometricpp.hpp</label>
+        <link refid="Geometricpp_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+      <node id="7">
+        <label>utility</label>
+      </node>
+      <node id="1">
+        <label>src/Quadrilaterals.cpp</label>
+        <link refid="Quadrilaterals_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Quadrilaterals_8cpp_a95ee97be00ff786a1fa345a8236ccbe4_1a95ee97be00ff786a1fa345a8236ccbe4" prot="public" static="no" mutable="no">
+        <type>double_t <ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502_1aa8186d9856a675a068a3ea032b01d502" kindref="member">Geometricpp::Quadrilaterals::Rhombus::height</ref></type>
+        <definition>double_t Geometricpp::Quadrilaterals::Rhombus::height const</definition>
+        <argsstring></argsstring>
+        <name>const</name>
+        <initializer>{
+    
+    double_t area = (diagonal_a * diagonal_b) / 2,
+    <ref refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" kindref="member">side_length</ref> = pitagoras_diagonais(diagonal_a, diagonal_b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Quadrilaterals.cpp" line="54" column="55" bodyfile="src/Quadrilaterals.cpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" prot="public" static="no" mutable="no">
+        <type>return area</type>
+        <definition>return area side_length</definition>
+        <argsstring></argsstring>
+        <name>side_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Quadrilaterals.cpp" line="59" column="18" bodyfile="src/Quadrilaterals.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Geometricpp_8hpp" kindref="compound">Geometricpp.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Definição<sp/>dos<sp/>métodos<sp/>do<sp/>Quadrado.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Square_afd6ffd2407c97dd0fb28b29fc5ab883d_1afd6ffd2407c97dd0fb28b29fc5ab883d" kindref="member">Geometricpp::Quadrilaterals::Square::size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>side_length;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Square_a45ef3b06266097a4d9dc2de129402544_1a45ef3b06266097a4d9dc2de129402544" kindref="member">Geometricpp::Quadrilaterals::Square::area</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" kindref="member">side_length</ref><sp/>*<sp/><ref refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" kindref="member">side_length</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Square_a10469fbb72ee5ac9b867ca0fcd1f1617_1a10469fbb72ee5ac9b867ca0fcd1f1617" kindref="member">Geometricpp::Quadrilaterals::Square::perimeter</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" kindref="member">side_length</ref><sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Square_ac4d245af431c4d9abbc23391eebcd358_1ac4d245af431c4d9abbc23391eebcd358" kindref="member">Geometricpp::Quadrilaterals::Square::diagonal</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::sqrt(2)<sp/>*<sp/><ref refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" kindref="member">side_length</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Definição<sp/>dos<sp/>métodos<sp/>do<sp/>Retângulo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">std::pair&lt;Geometricpp::GEOMETRIC_SIDE,<sp/>Geometricpp::GEOMETRIC_SIDE&gt;<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa3f3fefff5816f9af60bf8af12562d00_1aa3f3fefff5816f9af60bf8af12562d00" kindref="member">Geometricpp::Quadrilaterals::Rectangle::size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_pair(height,<sp/>width);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aff965981b053fd7cbd603a8fc3089833_1aff965981b053fd7cbd603a8fc3089833" kindref="member">Geometricpp::Quadrilaterals::Rectangle::area</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>height<sp/>*<sp/>width;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_a704c522e029cce65bc668e3db9dd5800_1a704c522e029cce65bc668e3db9dd5800" kindref="member">Geometricpp::Quadrilaterals::Rectangle::perimeter</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2<sp/>*<sp/>(height<sp/>+<sp/>width);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rectangle_aa591e63c23f491a835ddc89755ba0eaa_1aa591e63c23f491a835ddc89755ba0eaa" kindref="member">Geometricpp::Quadrilaterals::Rectangle::diagonal</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sqrt(pow(height,<sp/>2)<sp/>+<sp/>pow(width,<sp/>2));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Definição<sp/>dos<sp/>métodos<sp/>do<sp/>Losango.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a722afac4891be5f54083559be5e5314c_1a722afac4891be5f54083559be5e5314c" kindref="member">Geometricpp::Quadrilaterals::Rhombus::area</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(diagonal_a<sp/>*<sp/>diagonal_b)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94_1a309dfefe4282516344e7f8f176403f94" kindref="member">Geometricpp::Quadrilaterals::Rhombus::perimeter</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>4<sp/>*<sp/><ref refid="namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d_1a9aef6cfbf810f0731550e56b8eaeda8d" kindref="member">Geometricpp::pitagoras_diagonais</ref>(diagonal_a,<sp/>diagonal_b);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502_1aa8186d9856a675a068a3ea032b01d502" kindref="member">Geometricpp::Quadrilaterals::Rhombus::height</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>double_t<sp/>area<sp/>=<sp/>(diagonal_a<sp/>*<sp/>diagonal_b)<sp/>/<sp/>2,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" kindref="member">side_length</ref><sp/>=<sp/><ref refid="namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d_1a9aef6cfbf810f0731550e56b8eaeda8d" kindref="member">pitagoras_diagonais</ref>(diagonal_a,<sp/>diagonal_b);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>area<sp/>/<sp/><ref refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" kindref="member">side_length</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40_1ae50cb9c5cf3a9e9789cc08d5edf51d40" kindref="member">Geometricpp::Quadrilaterals::Rhombus::inradius</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>double_t<sp/>area<sp/>=<sp/>(diagonal_a<sp/>*<sp/>diagonal_b)<sp/>/<sp/>2,<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" kindref="member">side_length</ref><sp/>=<sp/><ref refid="namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d_1a9aef6cfbf810f0731550e56b8eaeda8d" kindref="member">pitagoras_diagonais</ref>(diagonal_a,<sp/>diagonal_b);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>double_t<sp/>perimeter<sp/>=<sp/>4<sp/>*<sp/><ref refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" kindref="member">side_length</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>area<sp/>/<sp/>perimeter;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">double_t<sp/><ref refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d_1a3aab040ff38ba1444a3e310ba96c257d" kindref="member">Geometricpp::Quadrilaterals::Rhombus::circumradius</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Quadrilaterals.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="pt">
+  <compounddef id="classGeometricpp_1_1Quadrilaterals_1_1Rhombus" kind="class" language="C++" prot="public">
+    <compoundname>Geometricpp::Quadrilaterals::Rhombus</compoundname>
+    <includes refid="Geometricpp_8hpp" local="no">Geometricpp.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_1ad64fedb7c2136cc702b9a230a5e0113b" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc_1aaef62d988311c3b588ee0393dd5be5dc" kindref="member">DIAGONAL</ref></type>
+        <definition>DIAGONAL Geometricpp::Quadrilaterals::Rhombus::diagonal_a</definition>
+        <argsstring></argsstring>
+        <name>diagonal_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="214" column="26" bodyfile="include/Geometricpp.hpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_1aad04d91ee8877c40ea9e5537536813e2" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceGeometricpp_aaef62d988311c3b588ee0393dd5be5dc_1aaef62d988311c3b588ee0393dd5be5dc" kindref="member">DIAGONAL</ref></type>
+        <definition>DIAGONAL Geometricpp::Quadrilaterals::Rhombus::diagonal_b</definition>
+        <argsstring></argsstring>
+        <name>diagonal_b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="214" column="37" bodyfile="include/Geometricpp.hpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a7af353ecb427df3d15993ced0d4b2081_1a7af353ecb427df3d15993ced0d4b2081" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Geometricpp::Quadrilaterals::Rhombus::Rhombus</definition>
+        <argsstring>(double_t side, double_t angle)</argsstring>
+        <name>Rhombus</name>
+        <param>
+          <type>double_t</type>
+          <declname>side</declname>
+        </param>
+        <param>
+          <type>double_t</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="216" column="26" bodyfile="include/Geometricpp.hpp" bodystart="216" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a722afac4891be5f54083559be5e5314c_1a722afac4891be5f54083559be5e5314c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Rhombus::area</definition>
+        <argsstring>() const</argsstring>
+        <name>area</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="221" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94_1a309dfefe4282516344e7f8f176403f94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Rhombus::perimeter</definition>
+        <argsstring>() const</argsstring>
+        <name>perimeter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="222" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502_1aa8186d9856a675a068a3ea032b01d502" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Rhombus::height</definition>
+        <argsstring>() const</argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="223" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40_1ae50cb9c5cf3a9e9789cc08d5edf51d40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Rhombus::inradius</definition>
+        <argsstring>() const</argsstring>
+        <name>inradius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="225" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="62" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d_1a3aab040ff38ba1444a3e310ba96c257d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double_t</type>
+        <definition>double_t Geometricpp::Quadrilaterals::Rhombus::circumradius</definition>
+        <argsstring>() const</argsstring>
+        <name>circumradius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Geometricpp.hpp" line="226" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="72" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe que representa um losango e fornece métodos para calcular suas propriedades geométricas. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Esta classe utiliza as diagonais do losango, que são calculadas com base no comprimento do lado e no ângulo fornecido. A classe fornece funções para calcular a área, o perímetro, a altura, o raio interno e o raio circunscrito do losango.</para>
+<para><simplesect kind="note"><para>As diagonais são calculadas usando as seguintes fórmulas:<itemizedlist>
+<listitem><para>diagonal_a = lado * sqrt(2 * (1 + cos(angulo)));</para>
+</listitem><listitem><para>diagonal_b = lado * sqrt(2 * (1 - cos(angulo)));</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="warning"><para>O ângulo deve ser fornecido em radianos. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/Geometricpp.hpp" line="211" column="9" bodyfile="include/Geometricpp.hpp" bodystart="212" bodyend="227"/>
+    <listofallmembers>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a722afac4891be5f54083559be5e5314c_1a722afac4891be5f54083559be5e5314c" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rhombus</scope><name>area</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d_1a3aab040ff38ba1444a3e310ba96c257d" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rhombus</scope><name>circumradius</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_1ad64fedb7c2136cc702b9a230a5e0113b" prot="private" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rhombus</scope><name>diagonal_a</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_1aad04d91ee8877c40ea9e5537536813e2" prot="private" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rhombus</scope><name>diagonal_b</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502_1aa8186d9856a675a068a3ea032b01d502" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rhombus</scope><name>height</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40_1ae50cb9c5cf3a9e9789cc08d5edf51d40" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rhombus</scope><name>inradius</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94_1a309dfefe4282516344e7f8f176403f94" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rhombus</scope><name>perimeter</name></member>
+      <member refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a7af353ecb427df3d15993ced0d4b2081_1a7af353ecb427df3d15993ced0d4b2081" prot="public" virt="non-virtual"><scope>Geometricpp::Quadrilaterals::Rhombus</scope><name>Rhombus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
