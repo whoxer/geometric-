@@ -28,25 +28,52 @@
 namespace Geometricpp 
 {
 
-    // Tipos definidos.
+    /**
+     * @typedef GEOMETRIC_SIDE
+     * @brief Tipo definido para lados de objetos geométricos planos.
+     *
+     * Este tipo representa os lados de formas geométricas,
+     * sendo um alias para double_t.
+     */
     typedef double_t GEOMETRIC_SIDE;
+
+    /**
+     * @typedef DIAGONAL
+     * @brief Tipo definido para as diagonais de objetos geométricos.
+     *
+     * Este tipo representa as diagonais de formas geométricas,
+     * sendo um alias para double_t.
+     */
     typedef double_t DIAGONAL;
 
-
-    // ``PI`` Armazena constante valor de PI
+    /**
+     * @var PI
+     * @brief Armazena o valor constante de PI.
+     *
+     * Esta constante é usada em cálculos geométricos que envolvem
+     * círculos e outras formas baseadas em pi.
+     */
     const double_t PI = 3.141592654;
 
-    /* Teorema de Pitágoras aplicada a Diagonais
+    /**
+     * @brief Calcula a diagonal de um retângulo usando o teorema de Pitágoras.
      *
-     *  Calcula e retorna o comprimento dos lados usando as diagonais
-     *  de quatro triângulos retângulos.
-     * 
-     *  exemplo:
-     *       
-     *      L² = (D / 2)² + (d / 2)²
-     * 
-     * 
-     *      ...
+     * Esta função recebe as duas diagonais de um retângulo e calcula o comprimento da
+     * diagonal resultante com base nas medidas fornecidas. O cálculo é feito usando
+     * o teorema de Pitágoras, considerando a maior diagonal como um dos catetos
+     * de um triângulo retângulo, e a menor diagonal como o outro cateto.
+     *
+     * @tparam length Tipo numérico que deve ser aritmético (int, float, double, etc.).
+     *
+     * @param largest_diagonal O comprimento da maior diagonal do retângulo. Este valor
+     * deve ser maior que o comprimento da menor diagonal.
+     * @param smallest_diagonal O comprimento da menor diagonal do retângulo. Este valor
+     * deve ser menor que o comprimento da maior diagonal.
+     *
+     * @return O comprimento da diagonal resultante calculada.
+     *
+     * @throws std::invalid_argument Se largest_diagonal for menor ou igual a
+     * smallest_diagonal.
      */
     template <typename length> 
     typename std::enable_if<std::is_arithmetic<length>::value, length>::type 
@@ -70,9 +97,11 @@ namespace Geometricpp
     // template <typename hipotenusa, >
     // typename std::enable_if<std::is_arithmetic<hipotenusa>::value, hipotenusa>::type
     // pitagoras()
-    
 
-    /*
+    /**
+     * @namespace Quadrilaterals
+     * 
+     * @brief
      * O namespace ``Quadrilaterals`` é responsável por agrupar as funções que
      * realizam cálculos relacionados a objetos geométricos planos do tipo quadrilátero.
      * Quadriláteros são figuras geométricas com quatro lados e ângulos internos que
@@ -165,6 +194,20 @@ namespace Geometricpp
                 double_t diagonal() const;
         };
 
+        /**
+         * @class Rhombus
+         * @brief Classe que representa um losango e fornece métodos para calcular suas propriedades geométricas.
+         *
+         * Esta classe utiliza as diagonais do losango, que são calculadas com base no comprimento do lado
+         * e no ângulo fornecido. A classe fornece funções para calcular a área, o perímetro, a altura,
+         * o raio interno e o raio circunscrito do losango.
+         *
+         * @note As diagonais são calculadas usando as seguintes fórmulas:
+         *       - diagonal_a = lado * sqrt(2 * (1 + cos(angulo)));
+         *       - diagonal_b = lado * sqrt(2 * (1 - cos(angulo)));
+         *
+         * @warning O ângulo deve ser fornecido em radianos.
+         */
         class Rhombus 
         {
             private:
@@ -178,6 +221,9 @@ namespace Geometricpp
                 double_t area() const;
                 double_t perimeter() const;
                 double_t height() const;
+
+                double_t inradius() const;
+                double_t circumradius() const;
         };
     };
     
