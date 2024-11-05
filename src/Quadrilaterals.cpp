@@ -45,3 +45,7 @@ double_t Geometricpp::Quadrilaterals::Rhombus::area() const {
 double_t Geometricpp::Quadrilaterals::Rhombus::perimeter() const {
     return 4 * Geometricpp::pitagoras_diagonais(diagonal_a, diagonal_b);
 }
+
+double_t Geometricpp::Quadrilaterals::Rhombus::height const {
+    return (diagonal_a * diagonal_b) / 2;
+}
