@@ -35,6 +35,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/Geometricpp.hpp" line="150" column="17" bodyfile="include/Geometricpp.hpp" bodystart="150" bodyend="150"/>
+        <references refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" compoundref="Quadrilaterals_8cpp" startline="59">side_length</references>
       </memberdef>
       <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Square_afd6ffd2407c97dd0fb28b29fc5ab883d_1afd6ffd2407c97dd0fb28b29fc5ab883d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double_t</type>
@@ -61,6 +62,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/Geometricpp.hpp" line="154" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="9" bodyend="11"/>
+        <references refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" compoundref="Quadrilaterals_8cpp" startline="59">side_length</references>
       </memberdef>
       <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Square_a10469fbb72ee5ac9b867ca0fcd1f1617_1a10469fbb72ee5ac9b867ca0fcd1f1617" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double_t</type>
@@ -74,6 +76,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/Geometricpp.hpp" line="155" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="13" bodyend="15"/>
+        <references refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" compoundref="Quadrilaterals_8cpp" startline="59">side_length</references>
       </memberdef>
       <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Square_ac4d245af431c4d9abbc23391eebcd358_1ac4d245af431c4d9abbc23391eebcd358" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double_t</type>
@@ -87,6 +90,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/Geometricpp.hpp" line="156" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="16" bodyend="18"/>
+        <references refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" compoundref="Quadrilaterals_8cpp" startline="59">side_length</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

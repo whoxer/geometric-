@@ -17,17 +17,6 @@
 <codeline></codeline>
 <codeline><highlight class="normal">*<sp/>Geometricpp</highlight></codeline>
 <codeline><highlight class="normal">*<sp/>Quadrilaterals</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">##<sp/>Classes</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">*<sp/>Square</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>Rectangle</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>Rhombus</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">##<sp/>Tipos<sp/>definidos</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">*<sp/>DIAGONAL<sp/>:<sp/>Geometricpp</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>GEOMETRIC_SIDE<sp/>:<sp/>Geometricpp</highlight></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>

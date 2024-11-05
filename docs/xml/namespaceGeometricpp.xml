@@ -120,6 +120,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/Geometricpp.hpp" line="80" column="5" bodyfile="include/Geometricpp.hpp" bodystart="80" bodyend="89"/>
+        <referencedby refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_ae50cb9c5cf3a9e9789cc08d5edf51d40_1ae50cb9c5cf3a9e9789cc08d5edf51d40" compoundref="Quadrilaterals_8cpp" startline="62" endline="70">Geometricpp::Quadrilaterals::Rhombus::inradius</referencedby>
+        <referencedby refid="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a309dfefe4282516344e7f8f176403f94_1a309dfefe4282516344e7f8f176403f94" compoundref="Quadrilaterals_8cpp" startline="50" endline="52">Geometricpp::Quadrilaterals::Rhombus::perimeter</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

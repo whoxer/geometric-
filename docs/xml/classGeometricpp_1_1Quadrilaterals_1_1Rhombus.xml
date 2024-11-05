@@ -78,6 +78,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/Geometricpp.hpp" line="222" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="50" bodyend="52"/>
+        <references refid="namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d_1a9aef6cfbf810f0731550e56b8eaeda8d" compoundref="Geometricpp_8hpp" startline="80" endline="89">Geometricpp::pitagoras_diagonais</references>
       </memberdef>
       <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_aa8186d9856a675a068a3ea032b01d502_1aa8186d9856a675a068a3ea032b01d502" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double_t</type>
@@ -104,6 +105,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/Geometricpp.hpp" line="225" column="26" bodyfile="src/Quadrilaterals.cpp" bodystart="62" bodyend="70"/>
+        <references refid="namespaceGeometricpp_a9aef6cfbf810f0731550e56b8eaeda8d_1a9aef6cfbf810f0731550e56b8eaeda8d" compoundref="Geometricpp_8hpp" startline="80" endline="89">Geometricpp::pitagoras_diagonais</references>
+        <references refid="Quadrilaterals_8cpp_afd5e1e8f4a6985932be5ffc335890113_1afd5e1e8f4a6985932be5ffc335890113" compoundref="Quadrilaterals_8cpp" startline="59">side_length</references>
       </memberdef>
       <memberdef kind="function" id="classGeometricpp_1_1Quadrilaterals_1_1Rhombus_a3aab040ff38ba1444a3e310ba96c257d_1a3aab040ff38ba1444a3e310ba96c257d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double_t</type>

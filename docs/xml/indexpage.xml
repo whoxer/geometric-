@@ -12,24 +12,7 @@
 <title>Namespaces</title>
 <para><itemizedlist>
 <listitem><para><ref refid="namespaceGeometricpp" kindref="compound">Geometricpp</ref></para>
-</listitem><listitem><para><ref refid="namespaceQuadrilaterals" kindref="compound">Quadrilaterals</ref></para>
-</listitem></itemizedlist>
-</para>
-</sect1>
-<sect1 id="index_1autotoc_md2">
-<title>Classes</title>
-<para><itemizedlist>
-<listitem><para>Square</para>
-</listitem><listitem><para>Rectangle</para>
-</listitem><listitem><para>Rhombus</para>
-</listitem></itemizedlist>
-</para>
-</sect1>
-<sect1 id="index_1autotoc_md3">
-<title>Tipos definidos</title>
-<para><itemizedlist>
-<listitem><para>DIAGONAL : <ref refid="namespaceGeometricpp" kindref="compound">Geometricpp</ref></para>
-</listitem><listitem><para>GEOMETRIC_SIDE : <ref refid="namespaceGeometricpp" kindref="compound">Geometricpp</ref> </para>
+</listitem><listitem><para><ref refid="namespaceQuadrilaterals" kindref="compound">Quadrilaterals</ref> </para>
 </listitem></itemizedlist>
 </para>
 </sect1>
