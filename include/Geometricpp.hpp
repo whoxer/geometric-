@@ -44,26 +44,33 @@ namespace Geometricpp
      *  exemplo:
      *       
      *      L² = (D / 2)² + (d / 2)²
+     * 
+     * 
      *      ...
      */
     template <typename length> 
     typename std::enable_if<std::is_arithmetic<length>::value, length>::type 
-    pitagoras_diagonais(length diagonal_maior, length diagonal_menor) 
+    pitagoras_diagonais(length largest_diagonal, length smallest_diagonal) 
     {
-        return sqrt((diagonal_maior / 2) * (diagonal_maior / 2) + 
-                    (diagonal_menor / 2) * (diagonal_menor / 2));
+        if (largest_diagonal < smallest_diagonal)
+        {
+            throw std::invalid_argument("largest_diagonal parameter cannot be smaller than smallest_diagonal parameter");
+        }
+
+        return sqrt((largest_diagonal / 2) * (largest_diagonal / 2) + 
+                    (smallest_diagonal / 2) * (smallest_diagonal / 2));
     }
 
+
+    // TODO* Implementar assim que terminar losango.
     /* Teorema de Pitágoras
     *  
     *  a² = b² + c²
     */
-    // TODO
-    /*
-    * template <typename hipotenusa, >
-    * typename std::enable_if<std::is_arithmetic<hipotenusa>::value, hipotenusa>::type
-    * pitagoras()
-    * /
+    // template <typename hipotenusa, >
+    // typename std::enable_if<std::is_arithmetic<hipotenusa>::value, hipotenusa>::type
+    // pitagoras()
+    
 
     /*
      * O namespace ``Quadrilaterals`` é responsável por agrupar as funções que
@@ -111,7 +118,7 @@ namespace Geometricpp
             private:
                 GEOMETRIC_SIDE side_length;
             public:
-                explicit Square(GEOMETRIC_SIDE side_length) : side_length(side_length) {};
+                Square(GEOMETRIC_SIDE side_length) : side_length(side_length) {};
 
                 double_t size() const;
 
@@ -119,6 +126,7 @@ namespace Geometricpp
                 double_t perimeter() const;
                 double_t diagonal() const;
         };
+
         /**
          * @class Rectangle
          * @brief Representa um retângulo definido por dois lados (altura e largura).
@@ -132,11 +140,10 @@ namespace Geometricpp
          * - perimeter(): Calcula e retorna o perímetro do retângulo.
          * - diagonal(): Calcula e retorna o comprimento da diagonal do retângulo.
          *
-         * @param h Altura do retângulo.
-         * @param w Largura do retângulo.
+         * @param height Altura do retângulo.
+         * @param width Largura do retângulo.
          * @throws std::invalid_argument Se os lados fornecidos forem iguais.
          */
-
         class Rectangle 
         {
             private:
@@ -163,8 +170,14 @@ namespace Geometricpp
             private:
                 DIAGONAL diagonal_a, diagonal_b;
             public:
+                explicit Rhombus(double_t side, double_t angle) {
+                    diagonal_a = side * sqrt(2 * (1 + cos(angle)));
+                    diagonal_b = side * sqrt(2 * (1 - cos(angle)));
+                }
+
                 double_t area() const;
                 double_t perimeter() const;
+                double_t height() const;
         };
     };
     
