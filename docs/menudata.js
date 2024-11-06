@@ -38,7 +38,4 @@ var menudata={children:[
 {text:"Tudo",url:"functions.html"},
 {text:"Funções",url:"functions_func.html"}]}]},
 {text:"Ficheiros",url:"files.html",children:[
-{text:"Lista de ficheiros",url:"files.html"},
-{text:"Membros dos Ficheiros",url:"globals.html",children:[
-{text:"Tudo",url:"globals.html"},
-{text:"Variáveis",url:"globals_vars.html"}]}]}]}
+{text:"Lista de ficheiros",url:"files.html"}]}]}
