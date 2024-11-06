@@ -53,7 +53,7 @@ namespace Geometricpp
      * Esta constante é usada em cálculos geométricos que envolvem
      * círculos e outras formas baseadas em pi.
      */
-    const double_t PI = 3.141592654;
+    const double_t PI = 3.14159265358979323846;
 
     /**
      * @brief Calcula a diagonal de um retângulo usando o teorema de Pitágoras.
@@ -88,16 +88,21 @@ namespace Geometricpp
                     (smallest_diagonal / 2) * (smallest_diagonal / 2));
     }
 
-
-    // TODO* Implementar assim que terminar losango.
-    /* Teorema de Pitágoras
-    *  
-    *  a² = b² + c²
-    */
-    // template <typename hipotenusa, >
-    // typename std::enable_if<std::is_arithmetic<hipotenusa>::value, hipotenusa>::type
-    // pitagoras()
-
+    /**
+     * @brief Calcula a hipotenusa de um triângulo retângulo usando o Teorema de Pitágoras.
+     *
+     * Essa função recebe os comprimentos de dois catetos e retorna o comprimento da hipotenusa
+     * de um triângulo retângulo. A fórmula utilizada é: c² = a + b²,
+     * onde 'a' e 'b' são os catetos e 'c' é o comprimento da hipotenusa.
+     *
+     */
+    template <typename T>
+    typename std::enable_if<std::is_arithmetic<T>::value, T>::type
+    pitagoras(T a, T b)
+    {
+        return std::sqrt(a * a + b * b);
+    }
+    
     /**
      * @namespace Quadrilaterals
      * 
@@ -214,9 +219,13 @@ namespace Geometricpp
                 DIAGONAL diagonal_a, diagonal_b;
             public:
                 explicit Rhombus(double_t side, double_t angle) {
-                    diagonal_a = side * sqrt(2 * (1 + cos(angle)));
-                    diagonal_b = side * sqrt(2 * (1 - cos(angle)));
+                    double_t angle_radians = angle * PI / 180.0;
+                    
+                    diagonal_a = side * sqrt(2 * (1 + cos(angle_radians)));
+                    diagonal_b = side * sqrt(2 * (1 - cos(angle_radians)));
                 }
+
+                void show_diagonals() const;
 
                 double_t area() const;
                 double_t perimeter() const;
