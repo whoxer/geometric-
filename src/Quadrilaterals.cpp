@@ -109,17 +109,44 @@ double_t Geometricpp::Quadrilaterals::Rectangle::diagonal() const
     return sqrt(pow(height, 2) + pow(width, 2));
 }
 
-
+/**
+ * @brief Calcula a área do losango.
+ *
+ * Esta função calcula e retorna a área do losango, utilizando a fórmula
+ * área = (diagonal_a * diagonal_b) / 2, onde diagonal_a e diagonal_b são
+ * as diagonais do losango.
+ *
+ * @return double_t Área do losango.
+ */
 double_t Geometricpp::Quadrilaterals::Rhombus::area() const 
 {
     return (diagonal_a * diagonal_b) / 2;
 }
 
+/**
+ * @brief Calcula o perímetro do losango.
+ *
+ * Esta função calcula e retorna o perímetro do losango, utilizando a fórmula
+ * perímetro = 4 * lado, onde o lado é calculado usando o Teorema de Pitágoras
+ * a partir das diagonais, por meio da função `pitagoras_diagonais()`.
+ *
+ * @return double_t Perímetro do losango.
+ */
 double_t Geometricpp::Quadrilaterals::Rhombus::perimeter() const 
 {
     return 4 * Geometricpp::pitagoras_diagonais(diagonal_a, diagonal_b);
 }
 
+/**
+ * @brief Calcula a altura do losango.
+ *
+ * Esta função calcula e retorna a altura do losango, utilizando a fórmula
+ * altura = área / comprimento do lado. A área é calculada com base nas diagonais
+ * do losango, e o comprimento do lado é obtido utilizando o Teorema de Pitágoras
+ * através da função `pitagoras_diagonais()`.
+ *
+ * @return double_t Altura do losango.
+ */
 double_t Geometricpp::Quadrilaterals::Rhombus::height() const 
 {
     
@@ -129,6 +156,16 @@ double_t Geometricpp::Quadrilaterals::Rhombus::height() const
     return area / side_length;
 }
 
+/**
+ * @brief Calcula o raio da circunferência inscrita no losango.
+ *
+ * Esta função calcula e retorna o raio da circunferência inscrita no losango
+ * utilizando a fórmula inradius = área / perímetro. A área é calculada com
+ * base nas diagonais do losango, e o perímetro é obtido multiplicando o
+ * comprimento do lado (calculado usando o Teorema de Pitágoras) por 4.
+ *
+ * @return double_t Raio da circunferência inscrita no losango.
+ */
 double_t Geometricpp::Quadrilaterals::Rhombus::inradius() const 
 {
 
@@ -139,11 +176,20 @@ double_t Geometricpp::Quadrilaterals::Rhombus::inradius() const
 
     return area / perimeter;
 }
+
+/**
+ * @brief Exibe as diagonais do losango.
+ *
+ * Esta função exibe os valores das duas diagonais do losango (diagonal_a e diagonal_b)
+ * no console, utilizando o fluxo de saída padrão.
+ */
 void Geometricpp::Quadrilaterals::Rhombus::show_diagonals() const
 {
     std::cout << "DIAGONAL_1: " << diagonal_a;
     std::cout << "DIAGONAL_2: " << diagonal_b;
 }
+
+
 /*
 double_t Geometricpp::Quadrilaterals::Rhombus::circumradius() const {
     // code
