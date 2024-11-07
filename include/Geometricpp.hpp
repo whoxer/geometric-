@@ -1,19 +1,23 @@
-/* Geometricpp - escrito por @whoxer */
+/**
+ * @author whoxer
+ *
+ * @brief Biblioteca de geometria plana para o C++
+ * */
 
 /*
-*  This program is free software: you can redistribute it and/or modify
-*  it under the terms of the GNU General Public License as published by
-*  the Free Software Foundation, either version 3 of the License, or
-*  (at your option) any later version.
-*  
-*  This program is distributed in the hope that it will be useful,
-*  but WITHOUT ANY WARRANTY; without even the implied warranty of
-*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-*  GNU General Public License for more details.
-*  
-*  You should have received a copy of the GNU General Public License
-*  along with this program. If not, see <https://www.gnu.org/licenses/>.
-*/ 
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
 
 #ifndef GEOMETRICPP_HPP
 #define GEOMETRICPP_HPP
@@ -25,9 +29,8 @@
 #include <type_traits>
 #include <utility>
 
-namespace Geometricpp 
+namespace Geometricpp
 {
-
     /**
      * @typedef GEOMETRIC_SIDE
      * @brief Tipo definido para lados de objetos geométricos planos.
@@ -75,16 +78,16 @@ namespace Geometricpp
      * @throws std::invalid_argument Se largest_diagonal for menor ou igual a
      * smallest_diagonal.
      */
-    template <typename length> 
-    typename std::enable_if<std::is_arithmetic<length>::value, length>::type 
-    pitagoras_diagonais(length largest_diagonal, length smallest_diagonal) 
+    template <typename length>
+    typename std::enable_if<std::is_arithmetic<length>::value, length>::type
+    pitagoras_diagonais(length largest_diagonal, length smallest_diagonal)
     {
         if (largest_diagonal < smallest_diagonal)
         {
             throw std::invalid_argument("largest_diagonal parameter cannot be smaller than smallest_diagonal parameter");
         }
 
-        return sqrt((largest_diagonal / 2) * (largest_diagonal / 2) + 
+        return sqrt((largest_diagonal / 2) * (largest_diagonal / 2) +
                     (smallest_diagonal / 2) * (smallest_diagonal / 2));
     }
 
@@ -102,10 +105,10 @@ namespace Geometricpp
     {
         return std::sqrt(a * a + b * b);
     }
-    
+
     /**
      * @namespace Quadrilaterals
-     * 
+     *
      * @brief
      * O namespace ``Quadrilaterals`` é responsável por agrupar as funções que
      * realizam cálculos relacionados a objetos geométricos planos do tipo quadrilátero.
@@ -130,7 +133,7 @@ namespace Geometricpp
      * biblioteca pode acessar todas as funções relacionadas a quadriláteros usando o
      * prefixo "Quadrilaterals::", o que melhora a legibilidade e claridade do código.
      */
-    namespace Quadrilaterals 
+    namespace Quadrilaterals
     {
         /**
          * @class Square
@@ -147,18 +150,28 @@ namespace Geometricpp
          *
          * @param side_length Comprimento do lado do quadrado.
          */
-        class Square 
+        class Square
         {
-            private:
-                GEOMETRIC_SIDE side_length;
-            public:
-                Square(GEOMETRIC_SIDE side_length) : side_length(side_length) {};
+        private:
+            GEOMETRIC_SIDE side_length;
 
-                double_t size() const;
+        public:
+            /**
+             * @brief Construtor para a classe Square.
+             *
+             * Este construtor inicializa um objeto da classe `Square` com o comprimento
+             * de um lado fornecido como parâmetro. O valor de `side_length` é armazenado
+             * no atributo correspondente da classe para representar o tamanho do lado do quadrado.
+             *
+             * @param side_length Comprimento do lado do quadrado.
+             */
+            Square(GEOMETRIC_SIDE side_length) : side_length(side_length) {};
 
-                double_t area() const;
-                double_t perimeter() const;
-                double_t diagonal() const;
+            double_t size() const;
+
+            double_t area() const;
+            double_t perimeter() const;
+            double_t diagonal() const;
         };
 
         /**
@@ -178,25 +191,38 @@ namespace Geometricpp
          * @param width Largura do retângulo.
          * @throws std::invalid_argument Se os lados fornecidos forem iguais.
          */
-        class Rectangle 
+        class Rectangle
         {
-            private:
-                GEOMETRIC_SIDE height, width;
+        private:
+            GEOMETRIC_SIDE height, width;
 
-            public:
-                explicit Rectangle(GEOMETRIC_SIDE h, GEOMETRIC_SIDE w) : height(h), width(w) 
+        public:
+            /**
+             * @brief Construtor para a classe Rectangle.
+             *
+             * Este construtor inicializa um objeto da classe `Rectangle` com os valores
+             * fornecidos para altura (`h`) e largura (`w`). Se os valores de altura e
+             * largura forem iguais, uma exceção do tipo `std::invalid_argument` é lançada,
+             * garantindo que o retângulo não seja um quadrado.
+             *
+             * @param h Altura do retângulo.
+             * @param w Largura do retângulo.
+             *
+             * @throws std::invalid_argument Se os valores de altura e largura forem iguais.
+             */
+            explicit Rectangle(GEOMETRIC_SIDE h, GEOMETRIC_SIDE w) : height(h), width(w)
+            {
+                if (height == width)
                 {
-                    if (height == width) 
-                    {
-                        throw std::invalid_argument("Sides can't be equal, at least one needs to be different.");
-                    }
+                    throw std::invalid_argument("Sides can't be equal, at least one needs to be different.");
                 }
+            }
 
-                std::pair<Geometricpp::GEOMETRIC_SIDE, Geometricpp::GEOMETRIC_SIDE> size() const;
+            std::pair<Geometricpp::GEOMETRIC_SIDE, Geometricpp::GEOMETRIC_SIDE> size() const;
 
-                double_t area() const;
-                double_t perimeter() const;
-                double_t diagonal() const;
+            double_t area() const;
+            double_t perimeter() const;
+            double_t diagonal() const;
         };
 
         /**
@@ -213,32 +239,46 @@ namespace Geometricpp
          *
          * @warning O ângulo deve ser fornecido em radianos.
          */
-        class Rhombus 
+        class Rhombus
         {
-            private:
-                DIAGONAL diagonal_a, diagonal_b;
-            public:
-                explicit Rhombus(double_t side, double_t angle) {
-                    double_t angle_radians = angle * PI / 180.0;
-                    
-                    diagonal_a = side * sqrt(2 * (1 + cos(angle_radians)));
-                    diagonal_b = side * sqrt(2 * (1 - cos(angle_radians)));
-                }
+        private:
+            DIAGONAL diagonal_a, diagonal_b;
 
-                void show_diagonals() const;
+        public:
+            /**
+             * @brief Construtor para a classe Rhombus.
+             *
+             * Este construtor inicializa um objeto da classe `Rhombus` com o comprimento
+             * do lado (`side`) e o ângulo entre as diagonais (`angle`). O valor do ângulo
+             * é convertido para radianos, e as diagonais do losango são calculadas com base
+             * na fórmula geométrica que envolve o lado e o ângulo.
+             *
+             * @param side Comprimento do lado do losango.
+             * @param angle Ângulo entre as diagonais em graus.
+             */
+            explicit Rhombus(double_t side, double_t angle)
+            {
+                double_t angle_radians = angle * PI / 180.0;
 
-                double_t area() const;
-                double_t perimeter() const;
-                double_t height() const;
+                diagonal_a = side * sqrt(2 * (1 + cos(angle_radians)));
+                diagonal_b = side * sqrt(2 * (1 - cos(angle_radians)));
+            }
 
-                double_t inradius() const;
-                double_t circumradius() const;
+            void show_diagonals() const;
+
+            double_t area() const;
+            double_t perimeter() const;
+            double_t height() const;
+
+            double_t inradius() const;
+            double_t circumradius() const;
         };
     };
-    
-    // TODO
-    namespace Triangles {};
-}
 
+    // TODO
+    // namespace Triangles
+    // {
+    // };
+}
 
 #endif
