@@ -1,5 +1,6 @@
 #include <Geometricpp.hpp>
 
+using namespace Geometricpp;
 using namespace Quadrilaterals;
 
 int main (void) 
