@@ -1,5 +1,5 @@
 /**
- * @author whoxer
+ * @whoxer
  *
  * @brief Biblioteca de geometria plana para o C++
  * */

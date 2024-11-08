@@ -1,4 +1,4 @@
-#include <Geometricpp.hpp>
+#include <geometricpp/Geometricpp.hpp>
 
 using namespace Geometricpp;
 
@@ -9,10 +9,10 @@ int main(void)
     std::cout << "Geomtricpp v0.0.1.0" << std::endl;
     std::cout << std::endl;
 
-    std::cout << "Insira o comprimento do primeiro cateto: "
+    std::cout << "Insira o comprimento do primeiro cateto: ";
     std::cin >> x;
 
-    std::cout << "Insira o comprimento do segundo cateto: " 
+    std::cout << "Insira o comprimento do segundo cateto: ";
     std::cin >> y;
 
     z = pitagoras(x, y);
