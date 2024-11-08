@@ -56,16 +56,16 @@ clean:
 # Instalar a biblioteca e os headers no sistema
 install: $(TARGET_STATIC) $(TARGET_SHARED)
 	@ echo "Instalando a biblioteca e headers..."
-	@ mkdir -p /usr/local/lib /usr/local/include/geometricpp
-	@ cp $(TARGET_STATIC) /usr/local/lib/
-	@ cp $(TARGET_SHARED) /usr/lib/
-	@ cp $(INCDIR)/*.hpp /usr/local/include/geometricpp/
+	mkdir -p /usr/local/lib /usr/local/include/geometricpp
+	cp $(TARGET_STATIC) /usr/local/lib/
+	cp $(TARGET_SHARED) /usr/lib/
+	cp $(INCDIR)/*.hpp /usr/local/include/geometricpp/
 
 uninstall:
 	@echo "Removendo a biblioteca e headers..."
-	@rm -f /usr/local/lib/libgeometricpp.a
-	@rm -f /usr/local/lib/libgeometricpp.so
-	@rm -rf /usr/local/include/geometricpp
+	rm -f /usr/local/lib/libgeometricpp.a
+	rm -f /usr/local/lib/libgeometricpp.so
+	rm -rf /usr/local/include/geometricpp
 
 # Doxygen para gerar a documentação
 docs:
