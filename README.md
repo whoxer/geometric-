@@ -1,10 +1,44 @@
 # Geometricpp
 
-<!-- ![Banner](https://i.ibb.co/MMfDJV4/Banner-repo-geometricpp.png) -->
+**Geometricpp** é uma biblioteca C++ que fornece classes e funções para manipulação e cálculo de propriedades geométricas de figuras planas, como quadriláteros, retângulos, losangos e outros objetos geométricos básicos. Ela foi projetada para ser fácil de integrar em projetos C++ e permite realizar cálculos geométricos de maneira eficiente.
 
-A biblioteca ``Geometricpp`` é uma biblioteca de geometria criada para o ``C++``. Seu objetivo é o cálculo de objetos geométricos com o cunho de tornar mais prático e fácil o cálculo de geometria para o desenvolvimento de softwares na linguagem de programação ``C++``.
+## Instalação
 
-## Namespaces
+Para instalar e utilizar a biblioteca **Geometricpp**, siga os passos abaixo.
 
-* Geometricpp
-* Quadrilaterals
+### Pré-requisitos
+
+- **GCC** (ou outro compilador C++) instalado em seu sistema.
+- **Make**: Ferramenta de automação de compilação.
+
+### Clonando o repositório
+
+1. **Clone o repositório**:
+
+```bash
+   git clone https://github.com/whoxer/geometricpp.git
+   cd geometricpp
+```
+
+2. **Compile com o Make e certifique-se que esteja em modo sudo**:
+
+```bash
+    sudo make install
+```
+
+### Pelo arquivo compactado
+
+1. **Baixe a última versão na aba releases**
+2. **Descompacte e rode o script**
+
+```bash
+    tar -xzf geometricpp-<version>.tar.gz
+    cd geometricpp-<version>/
+```
+
+3. **Rode o script de instalação**
+
+```bash
+    chmod +x install.sh
+    sudo ./install.sh
+```
