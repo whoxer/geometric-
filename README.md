@@ -42,3 +42,55 @@ Para instalar e utilizar a biblioteca **Geometricpp**, siga os passos abaixo.
     chmod +x install.sh
     sudo ./install.sh
 ```
+
+### Exemplo
+
+1. **Calculando o quadrado da hipotenusa com o Geometricpp:**
+
+```cpp
+#include <geometricpp/Geometricpp.hpp>
+
+using namespace Geometricpp;
+
+int main(void)
+{
+    float_t x, y, z;
+
+    std::cout << "Geometricpp v0.0.1.0" << std::endl;
+    std::cout << std::endl;
+
+    std::cout << "Insira o comprimento do primeiro cateto: ";
+    std::cin >> x;
+
+    std::cout << "Insira o comprimento do segundo cateto: ";
+    std::cin >> y;
+
+    z = pitagoras(x, y);
+
+    std::cout << "Cateto x: " << x << std::endl;
+    std::cout << "Cateto y: " << y << std::endl;
+    std::cout << "Hipotenusa z: " << z << std::endl;
+
+    return 0;
+}
+```
+
+2. **Compile:**
+
+```bash
+    g++ pitagoras.cpp -o pitag -Wall -Werror -lgeometricpp
+    ./pitag
+```
+
+3. A saída deve ser algo como:
+
+```text
+    Geomtricpp v0.0.1.0
+
+    Insira o comprimento do primeiro cateto: 20
+    Insira o comprimento do segundo cateto: 34
+    Cateto x: 20
+    Cateto y: 34
+    Hipotenusa z: 39.4462
+
+```
