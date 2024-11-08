@@ -6,7 +6,7 @@ int main(void)
 {
     float_t x, y, z;
 
-    std::cout << "Geomtricpp v0.0.1.0" << std::endl;
+    std::cout << "Geometricpp v0.0.1.0" << std::endl;
     std::cout << std::endl;
 
     std::cout << "Insira o comprimento do primeiro cateto: ";
